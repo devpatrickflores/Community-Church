@@ -1,0 +1,68 @@
+.header {
+    position: absolute;
+    z-index: 105;
+    top: 0;
+    width: 100%;
+    padding: 15px;
+    .column {
+        padding: 0;
+    }
+    .logo {
+        img {
+            width: 54px;
+            height: 52px;
+        }
+    }
+    .menu {
+        display: inline-block;
+        ul {
+            margin-left: 4rem;
+            margin-bottom: 0;
+            @include breakpoint(medium only) {
+                margin-left: 3rem;
+            }
+            @include breakpoint(small only) {
+                display: none;
+            }
+            li {
+                display: inline-block;
+                &:last-of-type {
+                    a {
+                        margin-right: 0;
+                    }
+                }
+                a {
+                    font-family: $font-family-nexa-light;
+                    color: $white;
+                    margin-right: 2rem;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    @include breakpoint(xlarge only) {
+                        font-size: 17px;
+                    }
+                    @include breakpoint(large only) {
+                        font-size: 17px;
+                    }
+                    @include breakpoint(medium only) {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    .header-action {
+        padding: 7px 0;
+        text-align: right;
+        @include breakpoint(medium only) {
+            padding: 12px 0;
+        }
+        @include breakpoint(small only) {
+            padding: 14px 0;
+        }
+        a {
+            &:last-of-type {
+                margin-left: 23px;
+            }
+        }
+    }
+}

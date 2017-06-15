@@ -1,0 +1,139 @@
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.98);
+    @include breakpoint(small only) {
+        font-size: 90%;
+    }
+    .overlay-nav {
+        display: table;
+        margin: auto;
+        position: relative;
+        top: 38%;
+        height: 60%;
+        font-size: 54px;
+        @include transform(translateY(-50%));
+        @include breakpoint(small only) {
+            top: 45%;
+            height: 70%;
+            font-size: 34px;
+        }
+        b {
+            font-family: $font-family-nexa-bold;
+            font-size: 20px;
+            font-weight: normal;
+            display: block;
+            padding-bottom: 25px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            display: inline-block;
+            height: 100%;
+            position: relative;
+            li {
+                display: block;
+                margin-bottom: 10px;
+                @include breakpoint(small only) {
+                    min-height: 34px;
+                }
+                a {
+                    font-family: $font-family-nexa-regular;
+                    display: block;
+                    color: #343e47;
+                    @include transition(color 0.2s);
+                    font-size: 21px;
+                    text-transform: uppercase;
+                    &:hover,
+                    &:focus {
+                        color: #f18a21;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.overlay-hugeinc {
+    opacity: 0;
+    visibility: hidden;
+    @include transition(opacity 0.5s, visibility 0s 0.5s);
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition: opacity 0.5s;
+        transition: opacity 0.5s;
+        z-index: 1000;
+        .overlay-nav {
+            ul {
+                opacity: 1;
+                @include transform(rotateX(0deg));
+            }
+        }
+        .overlay-hugeinc {
+            &.close {
+                .overlay-nav {
+                    ul {
+                        @include transform(translateY(25%) rotateX(-35deg));
+                    }
+                }
+            }
+        }
+    }
+    .overlay-nav {
+        -webkit-perspective: 1200px;
+        perspective: 1200px;
+        ul {
+            opacity: 0.4;
+            -webkit-transform: translateY(-25%) rotateX(35deg);
+            transform: translateY(-25%) rotateX(35deg);
+            -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+            transition: transform 0.5s, opacity 0.5s;
+        }
+    }
+}
+
+.overlay-close {
+    position: relative;
+    text-indent: -9999px;
+    margin: auto;
+    height: 26px;
+    width: 26px;
+    top: -28px;
+    cursor: pointer;
+    left: 55px;
+    &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 32px;
+        height: 0;
+        border-top: 2px solid #3c454e;
+        transform: rotate(45deg);
+        transform-origin: center;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 32px;
+        height: 0;
+        border-top: 2px solid #3c454e;
+        transform: rotate(-45deg);
+        transform-origin: center;
+    }
+}

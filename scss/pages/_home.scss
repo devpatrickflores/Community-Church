@@ -1,0 +1,227 @@
+.home-banner {
+    &.bg {
+        background: url('../img/img-home-banner.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        display: inline-block;
+        width: 100%;
+        position: relative;
+        height: 760px;
+        @include breakpoint(xxlarge only) {
+            height: 760px;
+        }
+        @include breakpoint(xlarge only) {
+            height: 650px;
+        }
+        @include breakpoint(large only) {
+            height: 600px;
+            background-attachment: initial;
+        }
+        @include breakpoint(medium only) {
+            height: 530px;
+            background-attachment: initial;
+        }
+        @include breakpoint(small only) {
+            height: 460px;
+            background-attachment: initial;
+        }
+        &:after {
+            content: "";
+            background: $translucent-orange;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &.holder {
+        @include absolute-center;
+        @extend .text-center;
+        z-index: 102;
+        width: 100%;
+    }
+    h1 {
+        font-family: $font-family-nexa-black;
+        color: $white;
+        font-size: 85px;
+        @include breakpoint(xlarge only) {
+            font-size: 75px;
+        }
+        @include breakpoint(large only) {
+            font-size: 70px;
+        }
+        @include breakpoint(medium only) {
+            font-size: 62px;
+            margin-top: 56px;
+        }
+        @include breakpoint(small only) {
+            font-size: 42px;
+            margin-top: 56px;
+        }
+    }
+    p {
+        font-family: $font-family-nexa-light;
+        color: $white;
+        font-size: 25px;
+        line-height: 24px;
+        margin-bottom: 3.5rem;
+        @include breakpoint(xlarge only) {
+            font-size: 23px;
+            margin-bottom: 3.3rem;
+        }
+        @include breakpoint(large only) {
+            font-size: 22px;
+            margin-bottom: 3.1rem;
+        }
+        @include breakpoint(medium only) {
+            font-size: 20px;
+            margin-bottom: 3rem;
+        }
+        @include breakpoint(small only) {
+            font-size: 18px;
+            margin-bottom: 2.7rem;
+        }
+    }
+    a {
+        span {
+            margin-left: 30px;
+        }
+    }
+}
+
+.home-category {
+    &.wrap {
+        margin-top: -7px;
+    }
+    .columns {
+        padding: 0;
+        overflow: hidden;
+    }
+    &.holder {
+        .title {
+            font-family: $font-family-nexa-black;
+            color: $white;
+            font-size: 42px;
+            @extend .text-center;
+            display: block;
+            @include breakpoint(xlarge only) {
+                font-size: 38px;
+            }
+            @include breakpoint(large only) {
+                font-size: 37px;
+            }
+            @include breakpoint(medium down) {
+                font-size: 32px;
+            }
+        }
+        .content {
+            font-family: $font-family-nexa-regular;
+            color: $white;
+            font-size: 20px;
+            @extend .text-center;
+            display: block;
+            padding: 0 2rem;
+            @include breakpoint(xlarge only) {
+                font-size: 18px;
+            }
+            @include breakpoint(large only) {
+                font-size: 16px;
+            }
+            @include breakpoint(medium down) {
+                font-size: 16px;
+            }
+        }
+        .parent {
+            position: relative;
+            display: block;
+            @include transition(all 1s);
+            &:hover {
+                @include transform(scale(1.1));
+                .mask {
+                    border: 0px double $translucent-skyblue;
+                    background: $translucent-skyblue;
+                }
+                &:after {
+                    background: transparent;
+                }
+            }
+            .mask {
+                cursor: pointer;
+                visibility: visible;
+                border: 257px solid transparent;
+                @include breakpoint(xlarge only) {
+                    border: 60px solid transparent;
+                }
+                @include breakpoint(large only) {
+                    border: 60px solid transparent;
+                }
+                @include breakpoint(medium only) {
+                    border: 40px solid transparent;
+                }
+                @include box-sizing(border-box);
+                @include transition(all 0.6s cubic-bezier(0.940, 0.850, 0.100, 0.620));
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                overflow: hidden;
+                top: 0;
+                left: 0;
+            }
+        }
+        .centered {
+            @include absolute-center;
+            z-index: 100;
+            width: 100%;
+        }
+        .home-category1 {
+            background: url('../img/img-home-category1.jpg');
+            height: 493px;
+            background-size: cover;
+            @include breakpoint(xxlarge only) {
+                height: 493px;
+            }
+            @include breakpoint(xlarge only) {
+                height: 360px;
+            }
+            @include breakpoint(large only) {
+                height: 360px;
+            }
+            @include breakpoint(medium down) {
+                height: 280px;
+            }
+        }
+        .home-category2 {
+            background: url('../img/img-home-category2.jpg');
+            height: 493px;
+            background-size: cover;
+            @include breakpoint(xlarge only) {
+                height: 413px;
+            }
+            @include breakpoint(xlarge only) {
+                height: 360px;
+            }
+            @include breakpoint(large only) {
+                height: 360px;
+            }
+            @include breakpoint(medium down) {
+                height: 280px;
+            }
+        }
+        .home-category3 {
+            background: url('../img/img-home-category3.jpg');
+            height: 493px;
+            background-size: cover;
+            @include breakpoint(xlarge only) {
+                height: 413px;
+            }
+            @include breakpoint(xlarge only) {
+                height: 360px;
+            }
+            @include breakpoint(large only) {
+                height: 360px;
+            }
+            @include breakpoint(medium down) {
+                height: 280px;
+            }
+        }
+    }
+}

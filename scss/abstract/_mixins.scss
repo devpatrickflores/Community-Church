@@ -1,0 +1,74 @@
+@mixin center($width: null, $height: null) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  @if not $width and not $height {
+    transform: translate(-50%, -50%);
+  } @else if $width and $height {
+    width: $width;
+    height: $height;
+    margin: -($width / 2) #{0 0} -($height / 2);
+  } @else if not $height {
+    width: $width;
+    margin-left: -($width / 2);
+    transform: translateY(-50%);
+  } @else {
+    height: $height;
+    margin-top: -($height / 2);
+    transform: translateX(-50%);
+  }
+}
+
+@mixin font-face($fontFamily, $path, $fileName, $svgLabel, $fontWeight: normal, $fontStyle: normal) {
+  @font-face {
+    font-family: $fontFamily;
+    src: url('#{$path + $fileName}.eot');
+    src: url('#{$path + $fileName}.eot?#iefix') format('embedded-opentype'),
+    url('#{$path + $fileName}.woff') format('woff'),
+    url('#{$path + $fileName}.ttf') format('truetype'),
+    url('#{$path + $fileName}.svg##{$svgLabel}') format('svg');
+
+    font-weight: $fontWeight;
+    font-style: $fontStyle;
+  }
+}
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+@mixin box-sizing($box-sizing...) {
+     -moz-box-sizing:    $box-sizing;
+    -webkit-box-sizing:  $box-sizing;
+    box-sizing:          $box-sizing;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

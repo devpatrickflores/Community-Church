@@ -1,0 +1,149 @@
+@include font-face($text-nexa-light, $base-url, 'nexa-light', 'nexa-light');
+@include font-face($text-nexa-regular, $base-url, 'nexa-regular', 'nexa-regular');
+@include font-face($text-nexa-bold, $base-url, 'nexa-bold', 'nexa-bold');
+@include font-face($text-nexa-black, $base-url, 'nexa-black', 'nexa-black');
+@include font-face($text-font-awesome, $base-url, 'font-awesome', 'font-awesome');
+.fa {
+    font-family: $font-family-font-awesome;
+    font-style: normal;
+}
+
+.button {
+    &.rounded {
+        text-transform: uppercase;
+        font-family: $font-family-nexa-black;
+        padding: 0.8em 1.4em;
+        font-size: 16px;
+        outline: 0;
+        border: 0;
+        border-radius: 4px;
+        line-height: 39px;
+        @include breakpoint(xlarge only) {
+            padding: 0.75em 1.4em;
+            font-size: 15px;
+        }
+        @include breakpoint(large only) {
+        	padding: 0.75em 1.4em;
+            font-size: 15px;
+        }
+        @include breakpoint(medium only) {
+        	padding: 0.75em 1.4em;
+            font-size: 14px;
+            line-height: 40px;
+        }
+        @include breakpoint(small only) {
+        	padding: 0.55em 1.4em;
+            font-size: 14px;
+            line-height: 40px;
+        }
+    }
+    &.btn-orange {
+        background: $white;
+        color: $orange;
+    }
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.row {
+    &.full-width {
+        max-width: $fullwidth;
+    }
+}
+
+.right-rounded-arrow {
+    background: $orange;
+    height: 38px;
+    width: 38px;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+    &:after {
+        content: "";
+        background: url('../img/icon-right-arrow.png');
+        display: inline-block;
+        width: 100%;
+        height: 17px;
+        margin: 10px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.icon-search {
+    background: url(../img/icon-search.png);
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    background-size: contain;
+}
+
+.icon-menu {
+    background: url('../img/icon-hamburger.png');
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 24px;
+    display: inline-block;
+    background-size: contain;
+}
+
+.bg-dark-blue {
+    &:after {
+        content: "";
+        background: rgba(51, 62, 72, 0.7);
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.bg-gray {
+    &:after {
+        content: "";
+        background: rgba(80, 80, 80, 0.7);
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.dark-blue {
+    color: rgba(51, 62, 72, 0.7);
+}
+
+.gray {
+    color: rgba(80, 80, 80, 0.7);
+}
+
+.button {
+    &.btn-orange {
+        &:hover {
+            background-color: #0084ad;
+        }
+    }
+}
+
+.underline {
+    text-decoration: none;
+    position: relative;
+    color: $white;
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0%;
+        border-bottom: 1px solid $white;
+        transition: 0.4s;
+    }
+    &:hover {
+        &:after {
+            width: 100%;
+        }
+    }
+}
