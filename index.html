@@ -12,7 +12,7 @@
 <body>
     <div class="header">
         <div class="row full-width">
-            <div class="column medium-10 small-6">
+            <div class="column medium-9 small-6">
                 <span class="logo">
                     <img src="img/logo.png" width="52" height="54" alt="Community Church Logo">
                 </span>
@@ -25,10 +25,15 @@
                     </ul>
                 </span>
             </div>
-            <div class="column medium-2 small-6">
+            <div class="column medium-3 small-6">
                 <div class="header-action">
                     <a href="#"><span class="icon-search"></span></a>
-                    <a href="#" id="trigger-overlay"><span class="icon-menu"></span></a>
+                    <span class="menu-button trigger" id="trigger-overlay">
+                        <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </span>
                 </div>
             </div>
         </div>
@@ -82,7 +87,7 @@
             <div class="columns large-3 small-12">
                 <div class="footer-logo-holder">
                     <div class="footer-center animated fadeIn" data-id="1">
-                        <a href="#"><img src="img/img-footer-logo.png" alt="Community Church Footer Logo"></a>
+                        <a href="#"><img src="img/img-footer-logo.png" width="264" height="62" alt="Community Church Footer Logo"></a>
                         <b>Service Time</b>
                         <p>Sunday at 9:00am &amp; 10:45am</p>
                         <h6 class="copyright">&copy; 2017 Community Church</h6>
@@ -120,8 +125,15 @@
         </div>
     </div>
     <div class="overlay overlay-hugeinc">
+        <div class="menu-button-holder">
+            <div class="menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
         <div class="overlay-nav">
-        <div class="overlay-close">Close</div>
             <b>MENU</b>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -131,6 +143,16 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>
+    </div>
+    <div class="morphsearch-wrapper">
+        <div id="morphsearch" class="morphsearch">
+            <form class="morphsearch-form">
+                <input class="morphsearch-input" type="search" placeholder="Search..." />
+                <button class="morphsearch-submit" type="submit">Search</button>
+            </form>
+            <span class="morphsearch-close"></span>
+        </div>
+        <div class="morphsearch-overlay"></div>
     </div>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="js/modernizr.custom.js"></script>
