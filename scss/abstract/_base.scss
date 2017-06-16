@@ -2,6 +2,7 @@
 @include font-face($text-nexa-regular, $base-url, 'nexa-regular', 'nexa-regular');
 @include font-face($text-nexa-bold, $base-url, 'nexa-bold', 'nexa-bold');
 @include font-face($text-nexa-black, $base-url, 'nexa-black', 'nexa-black');
+@include font-face($text-nexa-heavy, $base-url, 'nexa-heavy', 'nexa-heavy');
 @include font-face($text-font-awesome, $base-url, 'font-awesome', 'font-awesome');
 @include font-face($text-font-icomoon, $base-url, 'icomoon', 'icomoon');
 .fa {
@@ -126,6 +127,10 @@
     color: rgba(80, 80, 80, 0.7);
 }
 
+.bg-darkblue {
+    background: $dark-blue;
+}
+
 .button {
     &.btn-orange {
         &:hover {
@@ -150,6 +155,23 @@
     &:hover {
         &:after {
             width: 100%;
+        }
+    }
+}
+
+.img-round {
+    &.small {
+        img {
+            width: 75px;
+            height: 75px;
+        }
+    }
+    img {
+        border-radius: 50%;
+    }
+    &.border-gray {
+        img {
+            border: 2px solid #b7babe;
         }
     }
 }

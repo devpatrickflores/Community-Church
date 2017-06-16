@@ -9,11 +9,13 @@
 @import 'abstract/animations';
 @import 'abstract/mixins';
 @import 'abstract/base';
-@import 'pages/home';
 @import 'layout/header';
 @import 'layout/menu';
 @import 'layout/footer';
 @import 'layout/search';
+@import 'layout/testimonials';
+@import 'pages/home';
+@import 'pages/blog';
 
 @include foundation-global-styles;
 @include foundation-grid;

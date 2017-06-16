@@ -1,0 +1,106 @@
+.blog-top {
+    &.dt {
+        position: relative;
+    }
+    .columns {
+        padding: 0;
+    }
+    &.centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(0, -50%));
+        left: 10%;
+        right: 10%;
+    }
+    &.content-holder {
+        min-height: 532px;
+        max-height: 532px;
+        height: 100%;
+        position: relative;
+        .subtitle-text {
+            color: $light-gray;
+            font-family: $font-family-nexa-heavy;
+            font-size: 19px;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        h1 {
+            font-family: $font-family-nexa-black;
+            font-size: 48px;
+            color: $orange;
+            margin-bottom: 10px;
+        }
+    }
+    &.img-holder {
+        img {
+            min-height: 532px;
+            max-height: 532px;
+            height: 100%;
+            min-width: 100%;
+        }
+    }
+    &.author-text {
+        color: $light-gray;
+        font-family: $font-family-nexa-light;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+}
+
+.blog-content {
+    &.sp-medium {
+        padding: 80px 0;
+    }
+    h2 {
+        font-family: $font-family-nexa-heavy;
+        font-size: 30px;
+        color: $orange;
+        width: 695px;
+        display: table;
+        margin: auto;
+        margin-bottom: 15px;
+        line-height: 24px;
+    }
+    h3 {
+        font-family: $font-family-nexa-heavy;
+        font-size: 22px;
+        color: $light-gray2;
+        width: 695px;
+        display: table;
+        margin: auto;
+        margin-bottom: 25px;
+        line-height: 24px;
+    }
+    ul {
+        width: 695px;
+        display: table;
+        margin: auto;
+        color: $gray2;
+        font-family: $font-family-nexa-regular;
+        font-size: 16px;
+        padding-left: 30px;
+        margin-bottom: 10px;
+    }
+    p {
+        color: $gray2;
+        font-family: $font-family-nexa-regular;
+        font-size: 16px;
+        width: 695px;
+        display: table;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    img {
+        width: 830px;
+        margin: auto;
+        display: table;
+        margin-bottom: 10px;
+    }
+    .spacer-small {
+        height: 20px;
+    }
+    .spacer-medium {
+        height: 45px;
+    }
+}
