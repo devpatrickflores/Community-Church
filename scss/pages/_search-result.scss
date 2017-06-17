@@ -1,0 +1,187 @@
+    .search-top {
+        &.wrap {
+            height: 485px;
+            position: relative;
+            @include breakpoint(xlarge only) {
+                height: 460px;
+            }
+            @include breakpoint(large only) {
+                height: 400px;
+            }
+            @include breakpoint(medium only) {
+                height: 400px;
+            }
+            @include breakpoint(small only) {
+                height: 360px;
+            }
+            .centered {
+                @include absolute-center;
+                width: 100%;
+            }
+            h1 {
+                font-family: $font-family-nexa-black;
+                color: $white;
+                font-size: 48px;
+                text-align: center;
+                @include breakpoint(large only) {
+                    font-size: 42px;
+                }
+                @include breakpoint(medium only) {
+                    font-size: 42px;
+                }
+                @include breakpoint(small only) {
+                    font-size: 32px;
+                    padding: 0 15px;
+                }
+            }
+        }
+    }
+    
+    .search-lists {
+        &.wrap {
+            padding: 110px 0;
+            @include breakpoint(small only) {
+                padding: 70px 0;
+            }
+        }
+        &.results {
+            display: table;
+            margin-bottom: 70px;
+            @include breakpoint(medium only) {
+                margin-bottom: 50px;
+            }
+            @include breakpoint(small only) {
+                margin-bottom: 50px;
+            }
+            &.content {
+                display: table-cell;
+                vertical-align: top;
+                margin-bottom: 0;
+                @include breakpoint(small only) {
+                    display: block;
+                }
+                h2 {
+                    font-family: $font-family-nexa-xbold;
+                    font-size: 30px;
+                    color: $skyblue2;
+                    line-height: 34px;
+                    margin-bottom: 6px;
+                    @include breakpoint(large only) {
+                        font-size: 26px;
+                        line-height: 30px;
+                        margin-bottom: 10px;
+                    }
+                    @include breakpoint(medium only) {
+                        font-size: 26px;
+                        line-height: 30px;
+                        margin-bottom: 10px;
+                    }
+                    @include breakpoint(small only) {
+                        font-size: 26px;
+                        line-height: 30px;
+                        margin-bottom: 10px;
+                    }
+                    a {
+                        color: $skyblue2;
+                        border-bottom: 1px solid rgba(192, 192, 192, 0);
+                        @include transition(border 500ms ease);
+                        &:hover {
+                            color: $skyblue2;
+                            border-bottom: 2px solid $skyblue2;
+                        }
+                    }
+                }
+                p {
+                    font-family: $font-family-nexa-regular;
+                    font-size: 20px;
+                    color: $gray2;
+                    line-height: 30px;
+                    margin-bottom: 10px;
+                    @include breakpoint(large only) {
+                        font-size: 18px;
+                        line-height: 23px;
+                        margin-bottom: 10px;
+                    }
+                    @include breakpoint(medium only) {
+                        font-size: 18px;
+                        line-height: 23px;
+                        margin-bottom: 10px;
+                    }
+                    @include breakpoint(small only) {
+                        font-size: 18px;
+                        line-height: 23px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            &.image {
+                display: table-cell;
+                vertical-align: top;
+                margin-bottom: 0;
+                width: 180px;
+                @include breakpoint(small only) {
+                    width: 100%;
+                    display: block;
+                    margin: auto;
+                    margin-bottom: 15px;
+                }
+                img {
+                    padding-right: 20px;
+                }
+            }
+        }
+        &.holder {
+            @include breakpoint(xlarge only) {
+                width: 860px;
+                display: table;
+                margin: auto;
+            }
+            @include breakpoint(large only) {
+                width: 860px;
+                display: table;
+                margin: auto;
+            }
+            @include breakpoint(medium only) {
+                width: 100%;
+                display: table;
+                margin: auto;
+                padding: 0 30px;
+            }
+        }
+        &.readmore {
+            display: table;
+            margin: auto;
+            margin-top: -10px;
+            @include breakpoint(medium only) {
+                margin-top: 0;
+            }
+            @include breakpoint(medium only) {
+                margin-top: 0;
+            }
+            a {
+                background: $skyblue;
+                color: $white;
+                font-family: $font-family-nexa-xbold;
+                font-size: 16px;
+                width: 222px;
+                height: 66px;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                border-radius: 4px;
+                @include breakpoint(medium only) {
+                    width: 205px;
+                    height: 62px;
+                }
+                @include breakpoint(small only) {
+                    width: 190px;
+                    height: 60px;
+                }
+                @include transition(background-color 0.25s ease-in-out, color 0.25s ease-out);
+                &:hover {
+                    background: $orange;
+                    color: $white;
+                }
+            }
+        }
+    }

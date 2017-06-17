@@ -4,8 +4,15 @@
     .footer-logo-holder {
         padding: 30px;
         border-right: 1px solid $silver;
+        @include breakpoint(xxlarge only) {
+            height: 218px;
+        }
+        @include breakpoint(xlarge only) {
+            height: 218px;
+        }
         @include breakpoint(large only) {
             padding: 20px;
+            height: 209px;
         }
         @include breakpoint(medium down) {
             padding: 0;
@@ -15,7 +22,7 @@
             margin-bottom: 20px;
             margin-top: 10px;
             width: 264px;
-            height:auto;
+            height: auto;
         }
     }
     .footer-center {
@@ -139,6 +146,15 @@
     }
     .footer-logos {
         border-left: 1px solid $silver;
+        @include breakpoint(xxlarge only) {
+            height: 218px;
+        }
+        @include breakpoint(xlarge only) {
+            height: 218px;
+        }
+        @include breakpoint(large only) {
+            height: 209px;
+        }
         @include breakpoint(medium down) {
             border: 0;
         }
@@ -151,7 +167,7 @@
             }
             @include breakpoint(medium down) {
                 text-align: left;
-                height: 100%;
+                height: auto;
             }
             &.footer-social {
                 @include breakpoint(medium down) {
@@ -165,10 +181,10 @@
                         padding: 0 2%;
                     }
                     &:first-child {
-                            @include breakpoint(medium down) {
-                                padding-left: 0;
-                            }
+                        @include breakpoint(medium down) {
+                            padding-left: 0;
                         }
+                    }
                     i {
                         &:first-child {
                             @include breakpoint(medium down) {
