@@ -18,13 +18,19 @@
         ul {
             margin-left: 4rem;
             margin-bottom: 0;
+            @include breakpoint(xlarge only) {
+                margin-left: 2.7rem;
+            }
+            @include breakpoint(large only) {
+                margin-left: 1rem;
+            }
             @include breakpoint(medium only) {
-                margin-left: 3rem;
+                margin-left: 1rem;
             }
             @include breakpoint(small only) {
                 display: none;
             }
-            @media screen and (min-width:320px) and (max-width:767px){
+            @media screen and (min-width:320px) and (max-width:767px) {
                 display: none;
             }
             li {
@@ -44,10 +50,12 @@
                         font-size: 17px;
                     }
                     @include breakpoint(large only) {
-                        font-size: 17px;
+                        font-size: 16px;
+                        margin-right: 1.3rem;
                     }
                     @include breakpoint(medium only) {
-                        font-size: 16px;
+                        font-size: 14px;
+                        margin-right: 1rem;
                     }
                 }
             }

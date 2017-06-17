@@ -1,6 +1,8 @@
 @include font-face($text-nexa-light, $base-url, 'nexa-light', 'nexa-light');
 @include font-face($text-nexa-regular, $base-url, 'nexa-regular', 'nexa-regular');
+@include font-face($text-nexa-regular-italic, $base-url, 'nexa-regular-italic', 'nexa-regular-italic');
 @include font-face($text-nexa-bold, $base-url, 'nexa-bold', 'nexa-bold');
+@include font-face($text-nexa-bold-italic, $base-url, 'nexa-bold-italic', 'nexa-bold-italic');
 @include font-face($text-nexa-black, $base-url, 'nexa-black', 'nexa-black');
 @include font-face($text-nexa-heavy, $base-url, 'nexa-heavy', 'nexa-heavy');
 @include font-face($text-font-awesome, $base-url, 'font-awesome', 'font-awesome');
@@ -88,13 +90,18 @@
     }
 }
 
-.icon-menu {
-    background: url('../img/icon-hamburger.png');
-    background-repeat: no-repeat;
-    width: 48px;
-    height: 24px;
-    display: inline-block;
-    background-size: contain;
+.icon-play {
+    font-family: $text-font-icomoon;
+    color: $white;
+    font-size: 83px;
+    @include transition(all .2s ease-in-out);
+    cursor: pointer;
+    &:hover {
+        color: #c3c3c3;
+    }
+    &:before {
+        content: "\e389";
+    }
 }
 
 .bg-dark-blue {

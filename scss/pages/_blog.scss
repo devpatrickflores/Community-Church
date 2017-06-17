@@ -13,31 +13,135 @@
         left: 10%;
         right: 10%;
     }
+    &.full-width {
+        display: table-cell;
+        vertical-align: middle;
+        height: 485px;
+        margin: auto;
+        top: 10px;
+        position: relative;
+        @include breakpoint(xlarge only) {
+            position: relative;
+            top: 5px;
+            height: 461px;
+        }
+        @include breakpoint(large only) {
+            height: 400px;
+        }
+        @include breakpoint(medium only) {
+            height: 400px;
+            top: -5px;
+        }
+        @include breakpoint(small only) {
+            height: 330px;
+            top: 28px;
+        }
+    }
     &.content-holder {
-        min-height: 532px;
-        max-height: 532px;
+        min-height: 485px;
+        max-height: 485px;
         height: 100%;
         position: relative;
+        top: 20px;
+        @include breakpoint(xlarge only) {
+            min-height: 460px;
+            max-height: 460px;
+            top: 20px;
+        }
+        @include breakpoint(large only) {
+            min-height: 400px;
+            max-height: 400px;
+            top: 25px;
+        }
+        @include breakpoint(medium only) {
+            min-height: 400px;
+            max-height: 400px;
+            top: 25px;
+        }
+        @include breakpoint(small only) {
+            min-height: 240px;
+            max-height: 240px;
+            top: 0;
+        }
+        &.full-width {
+            margin: auto;
+            display: table;
+            width: 695px;
+            min-height: 100%;
+            max-height: 100%;
+            @include breakpoint(medium only) {
+                width: 600px;
+            }
+            @include breakpoint(small only) {
+                width: 100%;
+                padding: 0 15px;
+            }
+        }
         .subtitle-text {
             color: $light-gray;
             font-family: $font-family-nexa-heavy;
             font-size: 19px;
             letter-spacing: 1px;
             margin-bottom: 5px;
+            @include breakpoint(medium only) {
+                font-size: 18px;
+            }
+            @include breakpoint(small only) {
+                font-size: 18px;
+            }
         }
         h1 {
             font-family: $font-family-nexa-black;
             font-size: 48px;
             color: $orange;
             margin-bottom: 10px;
+            @include breakpoint(large only) {
+                font-size: 42px;
+                line-height: 54px;
+            }
+            @include breakpoint(medium only) {
+                font-size: 38px;
+                line-height: 49px;
+            }
+            @include breakpoint(small only) {
+                font-size: 32px;
+            }
+            br {
+                @include breakpoint(medium down) {
+                    display: none;
+                }
+            }
         }
     }
     &.img-holder {
-        img {
-            min-height: 532px;
-            max-height: 532px;
-            height: 100%;
-            min-width: 100%;
+        .main-image {
+            background: url(../img/img-blogdt-main.jpg);
+            background-size: cover;
+            background-position: top center;
+            height: 485px;
+            width: 100%;
+            display: table;
+            @include breakpoint(xlarge only) {
+                height: 460px;
+            }
+            @include breakpoint(large only) {
+                height: 400px;
+            }
+            @include breakpoint(medium only) {
+                height: 400px;
+            }
+            @include breakpoint(small only) {
+                height: 240px;
+            }
+            &:after {
+                content: "";
+                background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.09) 54%, rgba(0, 0, 0, 0) 63%);
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.09) 20%, rgba(0, 0, 0, 0) 63%);
+                //filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+                height: 100%;
+                width: 100%;
+                display: inline-block;
+            }
         }
     }
     &.author-text {
@@ -45,12 +149,22 @@
         font-family: $font-family-nexa-light;
         font-size: 20px;
         margin-left: 20px;
+        @include breakpoint(small only) {
+            font-size: 20px;
+            margin-left: 18px;
+        }
     }
 }
 
 .blog-content {
+    .columns {
+        padding: 0 15px;
+    }
     &.sp-medium {
         padding: 80px 0;
+        @include breakpoint(small only) {
+            padding: 60px 0;
+        }
     }
     h2 {
         font-family: $font-family-nexa-heavy;
@@ -61,6 +175,14 @@
         margin: auto;
         margin-bottom: 15px;
         line-height: 24px;
+        @include breakpoint(medium only) {
+            width: 600px;
+        }
+        @include breakpoint(small only) {
+            width: 100%;
+            font-size: 26px;
+                line-height: 31px;
+        }
     }
     h3 {
         font-family: $font-family-nexa-heavy;
@@ -71,6 +193,13 @@
         margin: auto;
         margin-bottom: 25px;
         line-height: 24px;
+        @include breakpoint(medium only) {
+            width: 600px;
+        }
+        @include breakpoint(small only) {
+            width: 100%;
+            font-size: 18px;
+        }
     }
     ul {
         width: 695px;
@@ -81,6 +210,13 @@
         font-size: 16px;
         padding-left: 30px;
         margin-bottom: 10px;
+        @include breakpoint(medium only) {
+            width: 600px;
+        }
+        @include breakpoint(small only) {
+            width: 100%;
+            font-size: 14px;
+        }
     }
     p {
         color: $gray2;
@@ -90,17 +226,31 @@
         display: table;
         margin: auto;
         margin-bottom: 10px;
+        @include breakpoint(medium only) {
+            width: 600px;
+        }
+        @include breakpoint(small only) {
+            width: 100%;
+            font-size: 14px;
+        }
     }
     img {
         width: 830px;
         margin: auto;
         display: table;
         margin-bottom: 10px;
+        @include breakpoint(medium only) {
+            width: 100%;
+            font-size: 14px;
+        }
     }
     .spacer-small {
         height: 20px;
     }
     .spacer-medium {
         height: 45px;
+        @include breakpoint(small only) {
+            height: 30px;
+        }
     }
 }

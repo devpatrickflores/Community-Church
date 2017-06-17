@@ -1,0 +1,150 @@
+.bottom-testimonials {
+    .columns {
+        padding: 0;
+    }
+    &.video-holder {
+        position: relative;
+        &.text {
+            position: absolute;
+            bottom: 63px;
+            text-align: center;
+            width: 100%;
+            @include breakpoint(xlarge down) {
+                bottom: 30px;
+            }
+            @include breakpoint(large down) {
+                bottom: 35px;
+            }
+        }
+        &.content {
+            color: $white;
+            font-family: $font-family-nexa-regular-italic;
+            font-size: 24px;
+            margin-top: 60px;
+            @include breakpoint(large down) {
+                margin-top: 30px;
+            }
+            @include breakpoint(small only) {
+                margin-top: 20px;
+                font-size: 22px;
+            }
+        }
+        .image-holder {
+            min-height: 432px;
+            max-height: 432px;
+            height: 100%;
+            background: url(../img/img-bottom-main.jpg);
+            background-size: cover;
+            background-position: center center;
+            @include breakpoint(xlarge down) {
+                min-height: 360px;
+                max-height: 360px;
+            }
+            @include breakpoint(large down) {
+                min-height: 320px;
+                max-height: 320px;
+            }
+            @include breakpoint(medium down) {
+                min-height: 290px;
+                max-height: 290px;
+            }
+            @include breakpoint(small only) {
+                min-height: 260px;
+                max-height: 260px;
+            }
+        }
+    }
+    &.content-holder {
+        background: $gray3;
+        min-height: 432px;
+        max-height: 432px;
+        height: 100%;
+        @include breakpoint(xlarge down) {
+            min-height: 360px;
+            max-height: 360px;
+        }
+        @include breakpoint(large down) {
+            min-height: 320px;
+            max-height: 320px;
+        }
+        @include breakpoint(medium only) {
+            min-height: 290px;
+            max-height: 290px;
+        }
+        @include breakpoint(small only) {
+            min-height: 100%;
+            max-height: 100%;
+        }
+        .centered {
+            display: table-cell;
+            vertical-align: middle;
+            height: 432px;
+            padding: 0 100px;
+            @include breakpoint(xlarge down) {
+                height: 360px;
+                padding-left: 60px;
+                padding-right: 40px;
+            }
+            @include breakpoint(large down) {
+                height: 320px;
+            }
+            @include breakpoint(medium only) {
+                padding-left: 15px;
+                padding-right: 5px;
+                height: 290px;
+            }
+            @include breakpoint(small down) {
+                height: 100%;
+                padding: 0 15px;
+            }
+        }
+        h4 {
+            color: $orange;
+            font-family: $font-family-nexa-black;
+            font-size: 40px;
+            line-height: 36px;
+            margin-bottom: 30px;
+            @include breakpoint(large only) {
+                font-size: 32px;
+                line-height: 32px;
+            }
+            @include breakpoint(medium only) {
+                font-size: 26px;
+                line-height: 32px;
+                margin-bottom: 30px;
+            }
+            @include breakpoint(small only) {
+                font-size: 32px;
+                line-height: 33px;
+                margin-top: 30px;
+                margin-bottom: 25px;
+            }
+        }
+        blockquote {
+            font-family: $font-family-nexa-bold-italic;
+            font-size: 33px;
+            color: $white;
+            border: 0;
+            padding: 0;
+            line-height: 45px;
+            margin: 0;
+            @include breakpoint(xlarge down) {
+                font-size: 30px;
+                line-height: 42px;
+            }
+            @include breakpoint(large only) {
+                font-size: 28px;
+                line-height: 38px;
+            }
+            @include breakpoint(medium only) {
+                font-size: 22px;
+                line-height: 32px;
+            }
+            @include breakpoint(small only) {
+                font-size: 22px;
+                line-height: 33px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

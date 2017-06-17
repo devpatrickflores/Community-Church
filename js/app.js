@@ -82,4 +82,17 @@ $(document).foundation();
         $(this).removeClass('open');
     });
 
+    $('a[data-rel^=lightcase]').lightcase({
+        onFinish: {
+            custom: function() {
+
+                var caption = $(this).find('.caption');
+                if (caption.length) {
+                    lightcase.get('caption').html(caption.html());
+                    $('#lightcase-caption').show();
+                }
+                lightcase.resize();
+            }
+        }
+    });
 })();
