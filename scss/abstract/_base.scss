@@ -5,6 +5,7 @@
 @include font-face($text-nexa-bold-italic, $base-url, 'nexa-bold-italic', 'nexa-bold-italic');
 @include font-face($text-nexa-black, $base-url, 'nexa-black', 'nexa-black');
 @include font-face($text-nexa-heavy, $base-url, 'nexa-heavy', 'nexa-heavy');
+@include font-face($text-nexa-book, $base-url, 'nexa-book', 'nexa-book');
 @include font-face($text-font-awesome, $base-url, 'font-awesome', 'font-awesome');
 @include font-face($text-font-icomoon, $base-url, 'icomoon', 'icomoon');
 .fa {
@@ -90,6 +91,30 @@
     }
 }
 
+.icon-down {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb04 2s infinite;
+    animation: sdb04 2s infinite;
+    box-sizing: border-box;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: bouncedown 2s infinite;
+    animation: bouncedown 2s infinite;
+    @include breakpoint(small only) {
+        width: 18px;
+        height: 18px;
+    }
+}
+
 .icon-play {
     font-family: $text-font-icomoon;
     color: $white;
@@ -126,8 +151,16 @@
     }
 }
 
+.bg-orange {
+    background: rgba(243, 138, 0, 0.7);
+}
+
 .dark-blue {
     color: rgba(51, 62, 72, 0.7);
+}
+
+.bg-skyblue {
+    background: $skyblue;
 }
 
 .gray {
