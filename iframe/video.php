@@ -29,4 +29,6 @@
 </div>
 <style>
 	html{overflow: hidden;}
+	@media screen and (max-width: 39.9375em){html {overflow: auto;}}
+	@media screen and (max-width: 63.9375em) and (min-width: 40em){html {overflow: auto;margin-bottom: 0;}}
 </style>

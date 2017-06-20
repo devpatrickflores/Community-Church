@@ -2,9 +2,6 @@
     background: url(../img/img-video-main.jpg);
     background-size: cover;
     background-position: center center;
-    height: 840px;
-    overflow: hidden;
-    position: relative;
     &:after {
         content: "";
         background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.09) 54%, rgba(0, 0, 0, 0) 63%);
@@ -17,10 +14,24 @@
     }
     .content-holder {
         z-index: 100;
+        h1 {
+            @include breakpoint(small only) {
+                margin-top: 35px;
+            }
+        }
+        p {
+            @include breakpoint(small only) {
+                font-size: 13px;
+                line-height: 22px;
+            }
+        }
         .link-holder {
             display: table;
             margin: auto;
             margin-top: 50px;
+            @include breakpoint(small only) {
+                margin-top: 0;
+            }
             .button {
                 text-align: center;
                 width: 289px;
@@ -35,6 +46,21 @@
                 font-size: 16px;
                 text-transform: uppercase;
                 @include transition(background-color 0.25s ease-in-out, color 0.25s ease-out);
+                @include breakpoint(large only) {
+                    width: 270px;
+                    height: 63px;
+                    font-size: 15px;
+                }
+                @include breakpoint(medium only) {
+                    font-size: 14px;
+                    width: 242px;
+                    height: 60px;
+                }
+                @include breakpoint(small only) {
+                    font-size: 13px;
+                    width: 240px;
+                    height: 50px;
+                }
                 &:hover {
                     background: $orange;
                     color: $white;
@@ -43,6 +69,15 @@
         }
         .scroll-link {
             bottom: -160px;
+            @include breakpoint(xlarge only) {
+                bottom: -65px;
+            }
+            @include breakpoint(large only) {
+                bottom: -60px;
+            }
+            @include breakpoint(small only) {
+                bottom: -8px;
+            }
         }
     }
 }
@@ -68,6 +103,12 @@
             color: $white;
             top: 20px;
             left: 25px;
+            z-index: 99;
+            @include breakpoint(small only) {
+                font-size: 18px;
+                top: 7px;
+                left: 15px;
+            }
         }
         img {
             width: 100%;
@@ -78,12 +119,20 @@
         @include absolute-center;
         @extend .text-center;
         z-index: 100;
+        width: 100%;
         a {
             display: block;
             margin-bottom: 40px;
+            @include breakpoint(small only) {
+                margin-bottom: 9px;
+                margin-top: 16px;
+            }
             .icon-play {
                 line-height: 0;
                 font-size: 135px;
+                @include breakpoint(small only) {
+                    font-size: 51px;
+                }
                 &:hover {
                     color: $orange;
                 }
@@ -94,20 +143,38 @@
             font-family: $font-family-nexa-black;
             font-size: 18px;
             color: $white;
+            @include breakpoint(small only) {
+                font-size: 16px;
+            }
         }
     }
     &.bottom-content {
         .cols {
-            width: 266.66667;
+            width: 33.33333%;
             float: left;
             padding: 20px;
             background: $dark-blue;
-            height: 178px;
+            height: 187px;
+            @include breakpoint(medium only) {
+                height: 196px;
+            }
+            @include breakpoint(small only) {
+                height: 162px;
+                width: 100%;
+            }
             &:nth-child(1) {
                 background: #414c56;
             }
             &:nth-child(2) {
                 border-right: 2px solid #414c56;
+                @include breakpoint(medium only) {
+                    border-right: 0;
+                    border-bottom: 2px solid #414c56;
+                }
+                @include breakpoint(small only) {
+                    border-right: 0;
+                    border-bottom: 2px solid #414c56;
+                }
             }
             .date {
                 font-family: $font-family-nexa-book;
@@ -115,6 +182,10 @@
                 color: $white;
                 margin-bottom: 15px;
                 line-height: 21px;
+                @include breakpoint(medium only) {
+                    margin-top: 27px;
+                    text-align: center;
+                }
             }
             .title {
                 font-family: $font-family-nexa-bold;
@@ -122,6 +193,12 @@
                 color: $orange;
                 line-height: 1.3em;
                 margin-bottom: 30px;
+                @include breakpoint(medium only) {
+                    text-align: center;
+                }
+                @include breakpoint(small only) {
+                    font-size: 28px;
+                }
             }
             .subtitle {
                 font-family: $font-family-nexa-black;
@@ -129,12 +206,20 @@
                 color: $white;
                 text-align: center;
                 line-height: 20px;
+                @include breakpoint(small only) {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
             }
             img {
                 width: 65px;
                 margin: auto;
                 display: table;
                 margin-bottom: 20px;
+                @include breakpoint(small only) {
+                    width: 50px;
+                    margin-bottom: 12px;
+                }
             }
             a {
                 display: block;
@@ -146,7 +231,25 @@
 
 iframe {
     &[src="iframe/video.php"] {
-        height: 636px !important;
-        max-height: 100%!important;
+        @include breakpoint(xxlarge only) {
+            height: 636px !important;
+            max-height: 100%!important;
+        }
+        @include breakpoint(xlarge only) {
+            height: 636px !important;
+            max-height: 100%!important;
+        }
+        @include breakpoint(large only) {
+            height: 620px !important;
+            max-height: 100%!important;
+        }
+        @include breakpoint(medium only) {
+            height: 636px !important;
+            max-height: 100%!important;
+        }
+        @include breakpoint(small only) {
+            height: 400px !important;
+            max-height: 100% !important;
+        }
     }
 }

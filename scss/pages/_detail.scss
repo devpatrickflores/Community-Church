@@ -1,8 +1,5 @@
 .detail-top {
-    &.bg-detail {
-        background: url(../img/img-detail-main.jpg);
-        background-size: cover;
-        background-position: center center;
+    &.bg-wrap {
         height: 840px;
         overflow: hidden;
         position: relative;
@@ -18,6 +15,11 @@
         @include breakpoint(small only) {
             height: 400px;
         }
+    }
+    &.bg-detail {
+        background: url(../img/img-detail-main.jpg);
+        background-size: cover;
+        background-position: center center;
         &:after {
             content: "";
             background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.09) 54%, rgba(0, 0, 0, 0) 63%);
@@ -26,7 +28,7 @@
             width: 100%;
             display: inline-block;
             position: absolute;
-            top:0;
+            top: 0;
         }
     }
     .columns {
@@ -200,8 +202,8 @@
             width: 277px;
             height: 66px;
             @include transition(background-color 0.25s ease-in-out, color 0.25s ease-out);
-            &:hover{
-                color:$white;
+            &:hover {
+                color: $white;
                 background: $orange;
             }
             @include breakpoint(xlarge down) {

@@ -1,9 +1,25 @@
 .landing-page-top {
-    &.bg-landing {
-        background: url(../img/img-landing-page-main.jpg);
-        background-size: cover;
+    &.bg-wrap {
+        &.bg-landing {
+            background: url(../img/img-landing-page-main.jpg);
+            background-size: cover;
+        }
         height: 443px;
         position: relative;
+        @include breakpoint(xlarge only) {
+            position: relative;
+            top: 5px;
+            height: 461px;
+        }
+        @include breakpoint(large only) {
+            height: 400px;
+        }
+        @include breakpoint(medium only) {
+            height: 400px;
+        }
+        @include breakpoint(small only) {
+            height: 330px;
+        }
         &:after {
             content: "";
             background: rgba(92, 92, 92, 0.6);
@@ -18,6 +34,10 @@
         width: 100%;
         z-index: 100;
         @include absolute-center;
+        margin-top: 50px;
+        @include breakpoint(small only) {
+            margin-top: 0;
+        }
         h1 {
             font-family: $font-family-nexa-black;
             font-size: 48px;
@@ -25,6 +45,20 @@
             text-align: center;
             line-height: 1.3em;
             margin-bottom: 20px;
+            @include breakpoint(xlarge down) {
+                font-size: 46px;
+                padding: 0 50px;
+            }
+            @include breakpoint(medium only) {
+                font-size: 42px;
+                padding: 0 50px;
+            }
+            @include breakpoint(small only) {
+                font-size: 32px;
+                padding: 0 15px;
+                margin-bottom: 10px;
+                margin-top: 30px;
+            }
         }
         p {
             font-family: $font-family-nexa-heavy;
@@ -33,6 +67,23 @@
             text-align: center;
             line-height: 1.8em;
             margin-bottom: 0;
+            @include breakpoint(xlarge down) {
+                font-size: 18px;
+                padding: 0 50px;
+            }
+            @include breakpoint(medium down) {
+                font-size: 16px;
+                padding: 0 50px;
+            }
+            @include breakpoint(small only) {
+                font-size: 14px;
+                padding: 0 15px;
+            }
+            br {
+                @include breakpoint(medium down) {
+                    display: none;
+                }
+            }
         }
     }
 }
@@ -51,6 +102,17 @@
                 height: 333px;
                 margin: auto;
                 display: table;
+                @include breakpoint(large only) {
+                    height: 297px;
+                }
+                @include breakpoint(medium only) {
+                    height: 232px;
+                }
+                @include breakpoint(small only) {
+                    height: auto;
+                    width: 100%;
+                    margin-bottom: 40px;
+                }
             }
         }
         &.content-holder {
@@ -60,6 +122,15 @@
             height: 100px;
             display: table;
             padding: 0 10px;
+            @include breakpoint(large only) {
+                height: 80px;
+            }
+            @include breakpoint(medium only) {
+                height: 60px;
+            }
+            @include breakpoint(small only) {
+                height: 70px;
+            }
             h2 {
                 font-family: $font-family-nexa-heavy;
                 color: $white;
@@ -68,6 +139,12 @@
                 vertical-align: middle;
                 display: table-cell;
                 line-height: 1.3em;
+                @include breakpoint(large only) {
+                    font-size: 22px;
+                }
+                @include breakpoint(medium down) {
+                    font-size: 18px;
+                }
             }
         }
         .columns {
@@ -77,5 +154,11 @@
     }
     &.results-wrap {
         padding: 100px 0;
+        @include breakpoint(medium only) {
+            padding: 80px 0;
+        }
+        @include breakpoint(small only) {
+            padding: 60px 0;
+        }
     }
 }

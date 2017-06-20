@@ -1,0 +1,92 @@
+.bg-dt-feed {
+    background: url(../img/img-blog-dt-feed-main.jpg);
+    background-size: cover;
+}
+
+.blog-posts {
+    .vlarge {
+        margin-bottom: 70px;
+        .columns {
+            &.medium-3 {
+                @include breakpoint(medium only) {
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+    &.posts-holder {
+        &.image-holder {
+            background: #000;
+            @include breakpoint(small only) {
+                margin-bottom: 20px;
+            }
+            a {
+                display: block;
+                @include transition (opacity 0.5s ease-in-out);
+                &:hover {
+                    filter: alpha(opacity=55);
+                    opacity: 0.55;
+                }
+                img {
+                    min-width: 100%;
+                    margin: auto;
+                    display: table;
+                }
+            }
+        }
+        &.content-holder {
+            h3 {
+                font-family: $font-family-nexa-bold;
+                color: $orange;
+                font-size: 24px;
+                text-align: left;
+                line-height: 1.3em;
+                margin-bottom: 5px;
+                @include breakpoint(medium down) {
+                    font-size: 20px;
+                    line-height: 1em;
+                }
+                a {
+                    font-family: $font-family-nexa-bold;
+                    color: $orange;
+                    font-size: 24px;
+                    line-height: 1.3em;
+                    text-align: left;
+                    border-bottom: 2px solid rgba(192, 192, 192, 0);
+                    @include transition(border 500ms ease);
+                    &:hover {
+                        border-bottom: 2px solid $orange;
+                    }
+                    @include breakpoint(medium down) {
+                        font-size: 20px;
+                        line-height: 1em;
+                    }
+                }
+            }
+            .posts-date {
+                font-family: $font-family-nexa-book;
+                color: $gray2;
+                font-size: 14px;
+                text-align: left;
+                line-height: 1.3em;
+                margin-bottom: 20px;
+            }
+            .posts-content {
+                font-family: $font-family-nexa-regular;
+                color: $gray2;
+                font-size: 16px;
+                text-align: left;
+                line-height: 1.5em;
+                @include breakpoint(medium only) {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .search-lists {
+        &.readmore {
+            margin-top: -10px;
+            margin-bottom: 100px;
+        }
+    }
+}

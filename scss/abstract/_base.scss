@@ -130,7 +130,7 @@
     }
 }
 
-.icon-circle{
+.icon-circle {
     font-family: $text-font-icomoon;
     color: $gray4;
     font-size: 15px;
@@ -138,8 +138,8 @@
     cursor: pointer;
     width: 10px;
     display: inline-block;
-    &:before{
-        content:"\e2af";
+    &:before {
+        content: "\e2af";
     }
 }
 
@@ -173,7 +173,7 @@
     color: rgba(51, 62, 72, 0.7);
 }
 
-.bg-gray{
+.bg-gray {
     background: rgba(51, 62, 72, 0.7);
 }
 
@@ -235,8 +235,34 @@
 }
 
 .row {
+    &.width-1170 {
+        max-width: 1170px;
+    }
     &.width-940 {
         max-width: 940px;
+        @include breakpoint(large only) {
+            max-width: 845px;
+        }
+        @include breakpoint(medium only) {
+            max-width: 668px;
+        }
+    }
+    &.vlarge {
+        @include breakpoint(xlarge only) {
+            max-width: 1024px;
+        }
+        @include breakpoint(large only) {
+            max-width: 930px;
+        }
+        &.vflex {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            @include breakpoint(large only) {
+                max-width: 930px;
+            }
+        }
     }
 }
 

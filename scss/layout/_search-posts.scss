@@ -1,11 +1,32 @@
 .search-posts {
+    .columns {
+        @include breakpoint(small only) {
+            padding: 0 15px;
+        }
+    }
     &.lists {
+        .columns {
+            &.medium-8 {
+                @include breakpoint(large only) {
+                    padding-right: 0;
+                }
+            }
+        }
         &.vspace {
             margin-top: 70px;
             margin-bottom: 28px;
+            @include breakpoint(small only) {
+                margin-top: 50px;
+                margin-bottom: 40px;
+            }
         }
         &.menu-holder {
             margin-top: 11px;
+            position: relative;
+            z-index: 102;
+            @include breakpoint(large only) {
+                margin-top: 7px;
+            }
             ul {
                 list-style: none;
                 margin-left: 0;
@@ -13,16 +34,47 @@
                 li {
                     display: inline-block;
                     margin-right: 40px;
+                    @include breakpoint(xlarge only) {
+                        margin-right: 27px;
+                    }
+                    @include breakpoint(large only) {
+                        margin-right: 22px;
+                    }
+                    @include breakpoint(medium only) {
+                        margin-right: 30px;
+                    }
+                    @include breakpoint(small only) {
+                        display: block;
+                        margin-right: 0;
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
                     &.is-dropdown-submenu-parent {
                         a {
+                            border: 0;
+                            &:hover {
+                                border: 0;
+                            }
                             &::after {
                                 display: none;
                             }
                         }
                         .is-dropdown-submenu {
+                            @include breakpoint(small only) {
+                                border: 0;
+                                position: relative;
+                                margin-top: 20px;
+                            }
                             li {
                                 a {
                                     padding: 0.7rem 1rem;
+                                    border: 0;
+                                    @include breakpoint(small only) {
+                                        padding: 0;
+                                    }
                                 }
                             }
                         }
@@ -42,11 +94,41 @@
                         line-height: 24px;
                         padding: 0;
                         padding-bottom: 4px;
+                        border-bottom: 4px solid rgba(192, 192, 192, 0);
+                        @include transition(border 500ms ease);
+                        @include breakpoint(xlarge only) {
+                            font-size: 18px;
+                        }
+                        @include breakpoint(large only) {
+                            font-size: 17px;
+                            line-height: 29px;
+                            padding-bottom: 3px;
+                        }
+                        @include breakpoint(medium only) {
+                            line-height: 20px;
+                            font-size: 16px;
+                        }
+                        @include breakpoint(small only) {
+                            line-height: 20px;
+                            font-size: 18px;
+                            display: inline-block;
+                            text-align: center;
+                        }
+                        &:hover {
+                            border-bottom: 4px solid $orange;
+                        }
                     }
                 }
             }
         }
         .search-holder {
+            @include breakpoint(medium only) {
+                margin-top: 30px;
+            }
+            @include breakpoint(small only) {
+                display: inline;
+                text-align: center;
+            }
             input[type="text"] {
                 box-shadow: none;
                 border: 0;
@@ -61,6 +143,15 @@
                     font-family: $font-family-nexa-light;
                     font-size: 15px;
                     color: $silver3;
+                }
+                @include breakpoint(xlarge only) {
+                    max-width: 277px;
+                }
+                @include breakpoint(large only) {
+                    max-width: 245px;
+                }
+                @include breakpoint(small only) {
+                    max-width: 260px;
                 }
             }
             input[type="submit"] {
@@ -98,8 +189,8 @@
         }
     }
     &.wrap {
-        .search-lists{
-            &.readmore{
+        .search-lists {
+            &.readmore {
                 margin: 20px auto 70px;
             }
         }
@@ -108,7 +199,16 @@
         &.new {
             .image-holder {
                 img {
-                    border: 9px solid $orange;
+                    outline: 9px solid $orange;
+                    outline-offset: -9px;
+                    @include breakpoint(large only) {
+                        outline: 7px solid $orange;
+                        outline-offset: -7px;
+                    }
+                    @include breakpoint(medium down) {
+                        outline: 7px solid $orange;
+                        outline-offset: -7px;
+                    }
                 }
                 .caption {
                     position: absolute;
@@ -118,31 +218,68 @@
                     font-family: $font-family-nexa-heavy;
                     font-size: 22px;
                     pointer-events: none;
+                    @include breakpoint(large only) {
+                        font-size: 18px;
+                        left: 26px;
+                        top: 13px;
+                    }
+                    @include breakpoint(small only) {
+                        font-size: 18px;
+                        left: 21px;
+                        top: 13px;
+                    }
                 }
             }
         }
         &.image-holder {
             margin-bottom: 25px;
             position: relative;
+            @include breakpoint(large only) {
+                margin-bottom: 10px;
+            }
+            @include breakpoint(medium down) {
+                margin-bottom: 15px;
+            }
             img {
                 margin: auto;
                 height: 215px;
                 display: table;
+                width: 100%;
+                @include breakpoint(xlarge only) {
+                    height: 183px;
+                }
+                @include breakpoint(large only) {
+                    height: 161px;
+                }
+                @include breakpoint(medium down) {
+                    height: 100%;
+                }
             }
         }
         &.content-holder {
             margin-bottom: 50px;
+            @include breakpoint(large only) {
+                margin-bottom: 40px;
+            }
             h3 {
                 font-family: $font-family-nexa-bold;
                 color: $orange;
                 font-size: 24px;
                 text-align: center;
                 line-height: 1.3em;
+                @include breakpoint(medium down) {
+                    font-size: 20px;
+                    line-height: 1em;
+                }
                 a {
                     font-family: $font-family-nexa-bold;
                     color: $orange;
                     font-size: 24px;
                     line-height: 1.3em;
+                    @include breakpoint(medium down) {
+                        font-size: 20px;
+                        line-height: 1em;
+                    }
                 }
             }
             .search-date {
