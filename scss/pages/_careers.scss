@@ -1,0 +1,97 @@
+.career-top {
+    &.vspace {
+        padding: 80px 0;
+        @include breakpoint(large only) {
+            padding: 70px 0;
+        }
+        @include breakpoint(medium down) {
+            padding: 60px 0;
+        }
+    }
+    p {
+        color: $gray5;
+        font-family: $font-family-nexa-regular;
+        font-size: 20px;
+        line-height: 1.3em;
+        margin-bottom: 30px;
+        @include breakpoint(large only) {
+            font-size: 18px;
+        }
+        @include breakpoint(medium down) {
+            font-size: 17px;
+        }
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.career-main {
+    &.wrap {
+        margin: 60px 0;
+    }
+    &.content {
+        display: table-cell;
+        padding-right: 100px;
+        @include breakpoint(large only) {
+            padding-right: 90px;
+        }
+        @include breakpoint(medium down) {
+            padding-right: 60px;
+        }
+        @include breakpoint(small only) {
+            display: block;
+        }
+        h2 {
+            color: $orange;
+            font-family: $font-family-nexa-xbold;
+            font-size: 30px;
+            @include breakpoint(large only) {
+                font-size: 28px;
+            }
+            @include breakpoint(medium down) {
+                font-size: 26px;
+            }
+        }
+        p {
+            color: $gray2;
+            font-family: $font-family-nexa-regular;
+            font-size: 20px;
+            @include breakpoint(large only) {
+                font-size: 18px;
+            }
+            @include breakpoint(medium down) {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+    &.holder {
+        margin-bottom: 50px;
+        display: table;
+        @include breakpoint(small only) {
+            margin-bottom: 70px;
+        }
+    }
+    &.image {
+        margin: 50px 0;
+        display: table-cell;
+        width: 85px;
+        vertical-align: middle;
+        float: right;
+        @include breakpoint(small only) {
+            float: none;
+            display: block;
+            text-align: center;
+            margin: auto;
+            margin-bottom: 25px;
+        }
+        img {
+            width: 85px;
+            height: auto;
+            @include breakpoint(medium only) {
+                width: 65px;
+            }
+        }
+    }
+}

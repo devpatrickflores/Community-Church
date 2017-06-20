@@ -110,7 +110,7 @@ $(document).foundation();
         $.ajax({
             type: 'POST',
             url: '/community-church/iframe/video.php',
-            data: "val1="+ val1,
+            data: {val: val1},
             success: function(response) {
                 content.html(response);    
             }    
