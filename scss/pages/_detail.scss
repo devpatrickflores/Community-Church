@@ -5,6 +5,7 @@
         background-position: center center;
         height: 840px;
         overflow: hidden;
+        position: relative;
         @include breakpoint(xlarge only) {
             height: 665px;
         }
@@ -24,6 +25,8 @@
             height: 100%;
             width: 100%;
             display: inline-block;
+            position: absolute;
+            top:0;
         }
     }
     .columns {
@@ -69,6 +72,9 @@
             color: $white;
             line-height: 52px;
             margin-bottom: 35px;
+            &.orange {
+                color: $orange;
+            }
             @include breakpoint(xlarge only) {
                 font-size: 42px;
                 line-height: 50px;
@@ -193,6 +199,11 @@
             border-radius: 5px;
             width: 277px;
             height: 66px;
+            @include transition(background-color 0.25s ease-in-out, color 0.25s ease-out);
+            &:hover{
+                color:$white;
+                background: $orange;
+            }
             @include breakpoint(xlarge down) {
                 font-size: 15px;
                 width: 257px;

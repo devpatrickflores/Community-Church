@@ -13,11 +13,15 @@
 @import 'layout/menu';
 @import 'layout/footer';
 @import 'layout/search';
+@import 'layout/search-posts';
 @import 'layout/testimonials';
 @import 'pages/home';
 @import 'pages/blog';
+@import 'pages/blog-feed';
 @import 'pages/detail';
 @import 'pages/search-result';
+@import 'pages/video';
+@import 'pages/landing-page';
 @import 'vendors/lightcase/lightcase';
 
 @include foundation-global-styles;

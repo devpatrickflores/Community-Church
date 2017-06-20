@@ -96,8 +96,24 @@ $(document).foundation();
         }
     });
 
-    $(document).on('click', 'a[href^=\\#]', function (e) {
+    $(document).on('click', '.scroll-link a[href^=\\#]', function(e) {
         e.preventDefault();
-        $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+        $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 500, 'linear');
+    });
+
+    $('.landing-page.results.holder a').on('hover', function() {
+        alert();
+    });
+
+    $('.ajaxVideo').click(function() {
+        var val1 = $('.search-date').html();
+        $.ajax({
+            type: 'POST',
+            url: '/community-church/iframe/video.php',
+            data: "val1="+ val1,
+            success: function(response) {
+                content.html(response);    
+            }    
+        });
     });
 })();

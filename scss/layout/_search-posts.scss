@@ -1,0 +1,157 @@
+.search-posts {
+    &.lists {
+        &.vspace {
+            margin-top: 70px;
+            margin-bottom: 28px;
+        }
+        &.menu-holder {
+            margin-top: 11px;
+            ul {
+                list-style: none;
+                margin-left: 0;
+                margin-bottom: 0;
+                li {
+                    display: inline-block;
+                    margin-right: 40px;
+                    &.is-dropdown-submenu-parent {
+                        a {
+                            &::after {
+                                display: none;
+                            }
+                        }
+                        .is-dropdown-submenu {
+                            li {
+                                a {
+                                    padding: 0.7rem 1rem;
+                                }
+                            }
+                        }
+                    }
+                    &.active {
+                        a {
+                            color: $gray2;
+                            border-bottom: 4px solid $orange;
+                            background: none;
+                        }
+                    }
+                    a {
+                        font-family: $font-family-nexa-bold;
+                        font-size: 20px;
+                        color: $gray4;
+                        text-transform: uppercase;
+                        line-height: 24px;
+                        padding: 0;
+                        padding-bottom: 4px;
+                    }
+                }
+            }
+        }
+        .search-holder {
+            input[type="text"] {
+                box-shadow: none;
+                border: 0;
+                border-bottom: 1px solid $silver2;
+                padding: 0;
+                font-family: $font-family-nexa-light;
+                font-size: 15px;
+                color: $dark-blue;
+                max-width: 332px;
+                display: inline-block;
+                @include placeholder {
+                    font-family: $font-family-nexa-light;
+                    font-size: 15px;
+                    color: $silver3;
+                }
+            }
+            input[type="submit"] {
+                appearance: none;
+                border: 0;
+                background: none;
+                outline: 0;
+                text-indent: -9999px;
+                position: absolute;
+                left: 0;
+                width: 24px;
+                height: 29px;
+                padding: 0;
+                cursor: pointer;
+            }
+            .submit-icon {
+                font-family: $text-font-icomoon;
+                color: $orange;
+                font-size: 24px;
+                @include transition(all .2s ease-in-out);
+                position: relative;
+                font-weight: bold;
+                top: 10px;
+                margin-left: 5px;
+                cursor: pointer;
+                &:hover {
+                    color: #9c6303;
+                    opacity: 0.8;
+                    font-weight: bold;
+                }
+                &:before {
+                    content: "\e8f7";
+                }
+            }
+        }
+    }
+    &.wrap {
+        .search-lists{
+            &.readmore{
+                margin: 20px auto 70px;
+            }
+        }
+    }
+    &.posts-holder {
+        &.new {
+            .image-holder {
+                img {
+                    border: 9px solid $orange;
+                }
+                .caption {
+                    position: absolute;
+                    left: 30px;
+                    top: 16px;
+                    color: white;
+                    font-family: $font-family-nexa-heavy;
+                    font-size: 22px;
+                    pointer-events: none;
+                }
+            }
+        }
+        &.image-holder {
+            margin-bottom: 25px;
+            position: relative;
+            img {
+                margin: auto;
+                height: 215px;
+                display: table;
+            }
+        }
+        &.content-holder {
+            margin-bottom: 50px;
+            h3 {
+                font-family: $font-family-nexa-bold;
+                color: $orange;
+                font-size: 24px;
+                text-align: center;
+                line-height: 1.3em;
+                a {
+                    font-family: $font-family-nexa-bold;
+                    color: $orange;
+                    font-size: 24px;
+                    line-height: 1.3em;
+                }
+            }
+            .search-date {
+                font-family: $font-family-nexa-book;
+                color: $gray2;
+                font-size: 14px;
+                text-align: center;
+                line-height: 1.3em;
+            }
+        }
+    }
+}
