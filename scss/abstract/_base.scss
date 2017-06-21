@@ -251,6 +251,21 @@
             max-width: 668px;
         }
     }
+    &.width-920 {
+        max-width: 920px;
+        @include breakpoint(large only) {
+            max-width: 860px;
+        }
+        @include breakpoint(medium only) {
+            max-width: 100%;
+        }
+        &.vflex {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+    }
     &.vlarge {
         @include breakpoint(xlarge only) {
             max-width: 1024px;

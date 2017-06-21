@@ -120,7 +120,9 @@ $(document).foundation();
     if (window_width < 768) {
         $(".sticky-sidebar").trigger("sticky_kit:detach");
     } else {
-        make_sticky();
+        if ($('.sticky-sidebar').length) {
+            make_sticky();
+        }
     }
 
     $(window).resize(function() {
@@ -128,7 +130,9 @@ $(document).foundation();
         if (window_width < 768) {
             $(".sticky-sidebar").trigger("sticky_kit:detach");
         } else {
-            make_sticky();
+            if ($('.sticky-sidebar').length) {
+                make_sticky();
+            }
         }
     });
 

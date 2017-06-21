@@ -94,19 +94,39 @@
         &.holder {
             a {
                 display: block;
+                &:hover {
+                    .content-holder {
+                        .inner {
+                            h2{
+                                margin-bottom: 10px;
+                            }
+                            p {
+                                opacity: 1;
+                                height: auto;
+                            }
+                        }
+                    }
+                    .landing-page{
+                        &.results{
+                            &.content-holder{
+                                height: 333px;
+                            }
+                        }
+                    }
+                }
             }
         }
         &.image-holder {
             background: $dark-blue;
             img {
-                height: 333px;
+                /*height: 333px;*/
                 margin: auto;
                 display: table;
                 @include breakpoint(large only) {
-                    height: 297px;
+                    /*height: 297px;*/
                 }
                 @include breakpoint(medium only) {
-                    height: 232px;
+                    /*height: 232px;*/
                 }
                 @include breakpoint(small only) {
                     height: auto;
@@ -122,6 +142,7 @@
             height: 100px;
             display: table;
             padding: 0 10px;
+            @include transition(all 0.4s ease-out);
             @include breakpoint(large only) {
                 height: 80px;
             }
@@ -131,13 +152,19 @@
             @include breakpoint(small only) {
                 height: 70px;
             }
+            .inner {
+                vertical-align: middle;
+                display: table-cell;
+                text-align: center;
+                overflow: hidden;
+                position: relative;
+            }
             h2 {
                 font-family: $font-family-nexa-heavy;
                 color: $white;
                 font-size: 24px;
                 text-align: center;
                 vertical-align: middle;
-                display: table-cell;
                 line-height: 1.3em;
                 @include breakpoint(large only) {
                     font-size: 22px;
@@ -145,6 +172,16 @@
                 @include breakpoint(medium down) {
                     font-size: 18px;
                 }
+            }
+            p {
+                font-family: $font-family-nexa-bold;
+                font-size: 14px;
+                color: $white;
+                margin: 0;
+                opacity: 0;
+                height: 0;
+                overflow: hidden;
+                @include transition(all 1s ease-in-out);
             }
         }
         .columns {

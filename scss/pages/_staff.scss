@@ -1,0 +1,152 @@
+.bg-staff {
+    &.bg-wrap {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.staff-result {
+    .columns {
+        @include breakpoint(medium down) {
+            padding: 0 15px;
+        }
+    }
+    &.featured {
+        &.featured-wrap {
+            margin-top: 50px;
+        }
+        &.content {
+            margin-bottom: 100px;
+            .lists {
+                &.image {
+                    display: table-cell;
+                    width: 215px;
+                    vertical-align: middle;
+                    @include breakpoint(medium only) {
+                        width: 190px;
+                    }
+                    @include breakpoint(small only) {
+                        display: block;
+                        width: auto;
+                    }
+                }
+                &.bio {
+                    display: table-cell;
+                    padding-left: 25px;
+                    @include breakpoint(small only) {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    &.lists {
+        &.lists-wrap {
+            margin-bottom: 120px;
+            @include breakpoint(small only) {
+                margin-bottom: 50px;
+            }
+            &.last {
+                margin-bottom: 30px;
+            }
+        }
+        &.content {
+            &.title {
+                h2 {
+                    text-align: center;
+                    font-family: $font-family-nexa-heavy;
+                    font-size: 40px;
+                    color: $orange2;
+                    margin-bottom: 30px;
+                    line-height: 1.3em;
+                    @include breakpoint(large down) {
+                        font-size: 36px;
+                    }
+                    @include breakpoint(small only) {
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+        &.holder {
+            &.image {
+                &.rounded {
+                    img {
+                        width: 215px;
+                        height: 215px;
+                        border-radius: 50%;
+                        margin: auto;
+                        display: table;
+                        margin-bottom: 20px;
+                        -webkit-filter: grayscale(100%);
+                        filter: grayscale(100%);
+                        @include transition(all 0.5s ease);
+                        &:hover {
+                            -webkit-filter: grayscale(0%);
+                            filter: grayscale(0%);
+                        }
+                        @include breakpoint(large only) {
+                            width: 190px;
+                            height: 190px;
+                        }
+                        @include breakpoint(medium only) {
+                            width: 190px;
+                            height: 190px;
+                        }
+                        @include breakpoint(small only) {
+                            width: 180px;
+                            height: 180px;
+                        }
+                    }
+                }
+            }
+            &.bio {
+                h3 {
+                    font-family: $font-family-nexa-heavy;
+                    font-size: 24px;
+                    color: $skyblue2;
+                    line-height: 1.3em;
+                    margin-bottom: 5px;
+                    @include breakpoint(small only) {
+                        font-size: 22px;
+                    }
+                }
+                h4 {
+                    font-family: $font-family-nexa-book;
+                    font-size: 16px;
+                    color: $orange2;
+                    line-height: 1.3em;
+                    margin-bottom: 5px;
+                    @include breakpoint(small only) {
+                        font-size: 17px;
+                    }
+                }
+                a {
+                    font-family: $font-family-nexa-book;
+                    font-size: 14px;
+                    color: $gray2;
+                    line-height: 1.3em;
+                    margin-bottom: 20px;
+                    display: table;
+                    border-bottom: 1px solid rgba(192, 192, 192, 0);
+                    @include transition(border 500ms ease);
+                    &:hover {
+                        border-bottom: 1px solid $gray2;
+                    }
+                }
+                p {
+                    font-family: $font-family-nexa-regular;
+                    font-size: 16px;
+                    color: $gray2;
+                    @include breakpoint(small only) {
+                        font-size: 14px;
+                    }
+                    &:last-of-type {
+                        margin-bottom: 60px;
+                    }
+                }
+            }
+        }
+    }
+}
