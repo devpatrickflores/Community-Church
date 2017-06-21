@@ -181,7 +181,7 @@
                 opacity: 0;
                 height: 0;
                 overflow: hidden;
-                @include transition(all 1s ease-in-out);
+                @include transition(all 0.3s ease-in-out);
             }
         }
         .columns {
