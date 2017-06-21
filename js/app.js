@@ -110,10 +110,32 @@ $(document).foundation();
         $.ajax({
             type: 'POST',
             url: '/community-church/iframe/video.php',
-            data: {val: val1},
+            data: { val: val1 },
             success: function(response) {
-                content.html(response);    
-            }    
+                content.html(response);
+            }
         });
     });
+    var window_width = $(window).width();
+    if (window_width < 768) {
+        $(".sticky-sidebar").trigger("sticky_kit:detach");
+    } else {
+        make_sticky();
+    }
+
+    $(window).resize(function() {
+        window_width = $(window).width();
+        if (window_width < 768) {
+            $(".sticky-sidebar").trigger("sticky_kit:detach");
+        } else {
+            make_sticky();
+        }
+    });
+
+    function make_sticky() {
+        $('.sticky-sidebar').stick_in_parent({
+            'parent': $('.js-sticky-container'),
+            'offset_top': 50
+        });
+    }
 })();

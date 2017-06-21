@@ -1,0 +1,170 @@
+.faq-panel {
+    &.wrap {
+        margin: 50px 0;
+        padding-bottom: 45px;
+        @include breakpoint(xlarge down) {
+            padding-bottom: 35px;
+        }
+    }
+    &.lists {
+        background: $light-white;
+        width: 310px;
+        padding: 30px 40px;
+        margin-left: auto;
+        margin-right: 35px;
+        &.fixed {
+            position: fixed;
+            top: 50px;
+        }
+        @include breakpoint(xlarge only) {
+            width: 273px;
+            margin-right: 35px;
+        }
+        @include breakpoint(large only) {
+            width: 255px;
+            margin-right: 35px;
+            padding: 30px;
+        }
+        @include breakpoint(medium down) {
+            width: 190px;
+            margin-right: 35px;
+            padding: 15px;
+        }
+        @include breakpoint(small only) {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        h2 {
+            font-family: $font-family-nexa-heavy;
+            font-size: 26px;
+            color: $gray2;
+            margin-bottom: 10px;
+            @include breakpoint(xlarge only) {
+                font-size: 22px;
+            }
+            @include breakpoint(large only) {
+                font-size: 22px;
+            }
+            @include breakpoint(medium down) {
+                font-size: 18px;
+            }
+            @include breakpoint(small only) {
+                font-size: 20px;
+            }
+        }
+        ul {
+            color: $orange;
+            margin-bottom: 0;
+            @include breakpoint(small only) {
+                display: table;
+                margin: auto;
+            }
+            li {
+                margin-bottom: 20px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+                a {
+                    font-family: $font-family-nexa-regular;
+                    font-size: 26px;
+                    color: $orange2;
+                    line-height: 1.3em;
+                    @include breakpoint(xlarge only) {
+                        font-size: 22px;
+                    }
+                    @include breakpoint(large only) {
+                        font-size: 22px;
+                    }
+                    @include breakpoint(medium down) {
+                        font-size: 18px;
+                    }
+                    @include breakpoint(small only) {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    &.faq-accordion {
+        &.holder {
+            margin-bottom: 145px;
+            @include breakpoint(xlarge down) {
+                margin-bottom: 125px;
+            }
+            @include breakpoint(medium down) {
+                margin-bottom: 110px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            h3 {
+                font-family: $font-family-nexa-black;
+                font-size: 45px;
+                color: $orange2;
+                line-height: 48px;
+                @include breakpoint(xlarge down) {
+                    font-size: 40px;
+                }
+                @include breakpoint(medium down) {
+                    font-size: 32px;
+                }
+            }
+            ul {
+                margin-bottom: 0;
+                li {
+                    &:last-of-type {
+                        a {
+                            margin-bottom: 0;
+                        }
+                    }
+                    a {
+                        background: $gray6;
+                        font-family: $font-family-nexa-heavy;
+                        font-size: 25px;
+                        color: $white;
+                        margin-bottom: 40px;
+                        @include breakpoint(xlarge down) {
+                            font-size: 20px;
+                        }
+                        @include breakpoint(medium down) {
+                            font-size: 16px;
+                            margin-bottom: 30px;
+                        }
+                        &:before {
+                            font-family: $text-family-helvetica;
+                            font-size: 20px;
+                            margin-top: -9px;
+                            @include breakpoint(xlarge down) {
+                                margin-top: -12px;
+                            }
+                        }
+                        &[aria-expanded="true"] {
+                            margin-bottom: 0;
+                        }
+                    }
+                    .accordion-content {
+                        margin-bottom: 40px;
+                        border-bottom: 1px solid #b7babe;
+                        @include breakpoint(medium down) {
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+            p {
+                font-family: $font-family-nexa-regular;
+                font-size: 16px;
+                color: $gray2;
+                line-height: 24px;
+                margin-bottom: 25px;
+                @include breakpoint(xlarge down) {
+                    font-size: 15px;
+                }
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
