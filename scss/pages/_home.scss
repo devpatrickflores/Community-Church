@@ -137,7 +137,7 @@
             &:hover {
                 @include transform(scale(1.1));
                 .mask {
-                    border: 0px double $translucent-skyblue;
+                    /*border: 0px double $translucent-skyblue;*/
                     background: $translucent-skyblue;
                 }
                 &:after {
@@ -147,7 +147,7 @@
             .mask {
                 cursor: pointer;
                 visibility: visible;
-                border: 257px solid transparent;
+                /*border: 257px solid transparent;
                 @include breakpoint(xlarge only) {
                     border: 60px solid transparent;
                 }
@@ -156,9 +156,9 @@
                 }
                 @include breakpoint(medium only) {
                     border: 40px solid transparent;
-                }
+                }*/
                 @include box-sizing(border-box);
-                @include transition(all 0.6s cubic-bezier(0.940, 0.850, 0.100, 0.620));
+                @include transition(all 0.4s ease-in-out);
                 width: 100%;
                 height: 100%;
                 position: absolute;

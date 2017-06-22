@@ -53,6 +53,14 @@
             @include breakpoint(small only) {
                 margin-bottom: 50px;
             }
+            &.wdimg {
+                .content {
+                    padding-left: 20px;
+                    @include breakpoint(small only) {
+                        padding-left: 0;
+                    }
+                }
+            }
             &.content {
                 display: table-cell;
                 vertical-align: top;
@@ -115,18 +123,23 @@
                 }
             }
             &.image {
-                display: table-cell;
+                display: inline-block;
                 vertical-align: top;
                 margin-bottom: 0;
-                width: 180px;
+                width: 160px;
+                background: $dark-blue;
                 @include breakpoint(small only) {
                     width: 100%;
                     display: block;
                     margin: auto;
                     margin-bottom: 15px;
                 }
-                img {
-                    padding-right: 20px;
+                a {
+                    @include transition (opacity 0.3s ease-in-out);
+                    &:hover {
+                        filter: alpha(opacity=55);
+                        opacity: 0.55;
+                    }
                 }
             }
         }

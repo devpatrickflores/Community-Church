@@ -110,9 +110,27 @@
                 left: 15px;
             }
         }
-        img {
+        .img[style] {
+            background-size: cover!important;
+            display: inline-block;
             width: 100%;
-            max-width: 100%;
+            height: 424px;
+            background-position: center center!important;
+            @include breakpoint(xxlarge only) {
+                height: 424px;
+            }
+            @include breakpoint(xlarge only) {
+                height: 424px;
+            }
+            @include breakpoint(large only) {
+                height: 408px;
+            }
+            @include breakpoint(medium only) {
+                height: 424px;
+            }
+            @include breakpoint(small only) {
+                height: 325px;
+            }
         }
     }
     &.content {

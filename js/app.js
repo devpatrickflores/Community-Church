@@ -36,6 +36,7 @@ $(document).foundation();
                 input.blur();
             } else {
                 classie.add(morphSearch, 'open');
+                jQuery('html').addClass('y-overflow');
             }
             isOpen = !isOpen;
         };
@@ -73,15 +74,20 @@ $(document).foundation();
         }
     });
 
+    $('.morphsearch-close').on('click', function() {
+        $('html').removeClass('y-overflow');
+    });
+
     $('.trigger.menu-button').click(function() {
         $(this).addClass('open');
         $('.overlay.overlay-hugeinc .menu-button').addClass('open');
+        $('html').addClass('y-overflow');
     });
     $('.overlay.overlay-hugeinc .menu-button').on('click', function() {
         $('.trigger.menu-button').removeClass('open');
         $(this).removeClass('open');
+        $('html').removeClass('y-overflow');
     });
-
     $('a[data-rel^=lightcase]').lightcase({
         onFinish: {
             custom: function() {
@@ -142,4 +148,14 @@ $(document).foundation();
             'offset_top': 50
         });
     }
+    $('.search-posts.lists.menu-holder ul li a').on('click', function(e) {
+        if (window_width < 768) {
+            e.preventDefault();
+        }
+        $('.search-posts.lists.menu-holder ul li a').removeClass('is-active');
+        $(this).addClass('is-active');
+        var url = $(this).attr('href');
+        $('.tab-contents').removeClass('is-active');
+        $(url).addClass('is-active');
+    });
 })();

@@ -14,6 +14,10 @@
     font-style: normal;
 }
 
+.y-overflow {
+    overflow-y: hidden;
+}
+
 .button {
     &.rounded {
         text-transform: uppercase;
@@ -81,7 +85,7 @@
 .icon-search {
     font-family: $text-font-icomoon;
     color: $white;
-    font-size: 24px;
+    font-size: 26px;
     @include transition(all .2s ease-in-out);
     &:hover {
         color: $dark-blue;

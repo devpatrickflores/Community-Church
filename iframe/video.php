@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../css/app.css">
 <div class="popup-video-holder">
 	<div class="popup-video-holder image">
-		<img src="../img/img-posts1.jpg" alt="">
+		<div class="img" style="background:url(../img/img-posts1.jpg)"></div>
 		<div class="new">NEW</div>
 		<div class="popup-video-holder content">
 			 <a data-rel="lightcase" href="//player.vimeo.com/video/68023211"><span class="icon-play"></span></a>
@@ -28,7 +28,8 @@
 	</div>
 </div>
 <style>
-	html{overflow: hidden;}
+
 	@media screen and (max-width: 39.9375em){html {overflow: auto;}}
-	@media screen and (max-width: 63.9375em) and (min-width: 40em){html {overflow: auto;margin-bottom: 0;}}
+	@media screen and (max-width: 63.9375em) and (min-width: 40em){html {overflow: hidden;margin-bottom: 0;}}
+	@media print, screen and (min-width: 64em){html{overflow: auto;}}
 </style>
