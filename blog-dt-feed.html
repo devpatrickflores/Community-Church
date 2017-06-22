@@ -66,20 +66,18 @@
         <div class="row vlarge width animatedParent animateOnce" data-sequence="200">
             <div class="columns large-8 small-12">
                 <div class="search-posts lists menu-holder">
-                    <ul class="dropdown menu tabs" id="video-tabs" data-responsive-accordion-tabs="accordion medium-tabs">
-                        <li class="tabs-title is-active animated fadeIn" data-id="1"><a href="#panel1" aria-selected="true">Most Recent</a></li>
-                        <li class="tabs-title animated fadeIn" data-id="2"><a href="#panel2">Sermons</a></li>
-                        <li class="tabs-title animated fadeIn" data-id="3"><a href="#panel3">Teachings</a></li>
-                        <li class="tabs-title animated fadeIn" data-id="4"><a href="#panel4">Testimonials</a></li>
-                    </ul>
-                    <ul class="dropdown menu tabs" id="video-tabs" data-responsive-accordion-tabs="accordion medium-tabs" data-dropdown-menu>
-                        <li class="animated fadeIn x-margin" data-id="5">
+                    <ul class="dropdown menu" data-dropdown-menu>
+                        <li class="animated fadeIn" data-id="1"><a class="is-active" href="#panel1">Most Recent</a></li>
+                        <li class="animated fadeIn" data-id="2"><a href="#panel2">Sermons</a></li>
+                        <li class="animated fadeIn" data-id="3"><a href="#panel3">Teachings</a></li>
+                        <li class="animated fadeIn" data-id="4"><a href="#panel4">Testimonials</a></li>
+                        <li class="animated fadeIn" data-id="5">
                             <a href="javascript:void();"><span class="icon-circle"></span><span class="icon-circle"></span><span class="icon-circle"></span></a>
-                            <ul class="dropdown menu tabs" data-dropdown-menu>
-                                <li class="tabs-title"><a href="#panel1">Item 1</a></li>
-                                <li class="tabs-title"><a href="#panel2">Item 2</a></li>
-                                <li class="tabs-title"><a href="#panel3">Item 3</a></li>
-                                <li class="tabs-title"><a href="#panel4">Item 4</a></li>
+                            <ul class="dropdown menu" data-dropdown-menu>
+                                <li><a href="#panel1">Item 1</a></li>
+                                <li><a href="#panel2">Item 2</a></li>
+                                <li><a href="#panel3">Item 3</a></li>
+                                <li><a href="#panel4">Item 4</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -95,386 +93,416 @@
             </div>
         </div>
     </div>
-    <div class="blog-posts wrap">
-        <div class="tabs-content animatedParent animateOnce" data-tabs-content="video-tabs">
-            <div class="tabs-panel" id="panel1">
-                <div class="flex-box">
-                    <div class="row vlarge">
-                        <div class="columns medium-3 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder image-holder">
-                                    <a href="#" data-rel="lightcase:videoCollection"><img src="img/img-blog-posts1.jpg" alt=""></a>
-                                </div>
-                            </div>
+    <div class="search-posts wrap">
+        <div class="row vlarge vflex animatedParent animateOnce" data-sequence="150">
+            <div class="tab-contents is-active" id="panel1">
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="1">
+                    <div class="search-posts posts-holder ajaxVideo new">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts1.jpg" alt=""></a>
+                            <div class="caption">NEW</div>
                         </div>
-                        <div class="columns medium-9 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder content-holder">
-                                    <h3><a href="#">1. Donec ullam corper nulla non metus auctor fringilla.</a></h3>
-                                    <div class="posts-date">August 3rd, 2017</div>
-                                    <div class="posts-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis augue ut fermentum eleifend. Aenean eget maximus purus, quis interdum augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                                </div>
-                            </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
                         </div>
                     </div>
-                    <div class="row vlarge">
-                        <div class="columns medium-3 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder image-holder">
-                                    <a href="#" data-rel="lightcase:videoCollection"><img src="img/img-blog-posts2.jpg" alt=""></a>
-                                </div>
-                            </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="2">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts2.jpg" alt=""></a>
                         </div>
-                        <div class="columns medium-9 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder content-holder">
-                                    <h3><a href="#">Etiam Mollis Curcus</a></h3>
-                                    <div class="posts-date">August 3rd, 2017</div>
-                                    <div class="posts-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis augue ut fermentum eleifend. Aenean eget maximus purus, quis interdum augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                                </div>
-                            </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Vulputate Purus Euismod</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
                         </div>
                     </div>
-                    <div class="row vlarge">
-                        <div class="columns medium-3 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder image-holder">
-                                    <a href="#" data-rel="lightcase:videoCollection"><img src="img/img-blog-posts3.jpg" alt=""></a>
-                                </div>
-                            </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="3">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts3.jpg" alt=""></a>
                         </div>
-                        <div class="columns medium-9 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder content-holder">
-                                    <h3><a href="#">Etiam Mollis Curcus</a></h3>
-                                    <div class="posts-date">August 3rd, 2017</div>
-                                    <div class="posts-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis augue ut fermentum eleifend. Aenean eget maximus purus, quis interdum augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                                </div>
-                            </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Commodo Vehicula</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
                         </div>
                     </div>
-                    <div class="row vlarge">
-                        <div class="columns medium-3 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder image-holder">
-                                    <a href="#" data-rel="lightcase:videoCollection"><img src="img/img-blog-posts4.jpg" alt=""></a>
-                                </div>
-                            </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="4">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts4.jpg" alt=""></a>
                         </div>
-                        <div class="columns medium-9 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder content-holder">
-                                    <h3><a href="#">Etiam Mollis Curcus</a></h3>
-                                    <div class="posts-date">August 3rd, 2017</div>
-                                    <div class="posts-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis augue ut fermentum eleifend. Aenean eget maximus purus, quis interdum augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                                </div>
-                            </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
                         </div>
                     </div>
-                    <div class="row vlarge">
-                        <div class="columns medium-3 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder image-holder">
-                                    <a href="#" data-rel="lightcase:videoCollection"><img src="img/img-blog-posts1.jpg" alt=""></a>
-                                </div>
-                            </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="5">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts5.jpg" alt=""></a>
                         </div>
-                        <div class="columns medium-9 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder content-holder">
-                                    <h3><a href="#">Etiam Mollis Curcus</a></h3>
-                                    <div class="posts-date">August 3rd, 2017</div>
-                                    <div class="posts-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis augue ut fermentum eleifend. Aenean eget maximus purus, quis interdum augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                                </div>
-                            </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="6">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts6.jpg" alt=""></a>
+                        </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="7">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts7.jpg" alt=""></a>
+                        </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="8">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts8.jpg" alt=""></a>
+                        </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="9">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts9.jpg" alt=""></a>
+                        </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="tabs-panel" id="panel2">
-                <div class="flex-box">
-                    <div class="row vlarge">
-                        <div class="columns medium-3 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder image-holder">
-                                    <a href="#" data-rel="lightcase:videoCollection"><img src="img/img-blog-posts1.jpg" alt=""></a>
-                                </div>
-                            </div>
+            <div class="tab-contents" id="panel2">
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="1">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts1.jpg" alt=""></a>
                         </div>
-                        <div class="columns medium-9 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder content-holder">
-                                    <h3><a href="#">2. Donec ullam corper nulla non metus auctor fringilla.</a></h3>
-                                    <div class="posts-date">August 3rd, 2017</div>
-                                    <div class="posts-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis augue ut fermentum eleifend. Aenean eget maximus purus, quis interdum augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                                </div>
-                            </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
                         </div>
                     </div>
-                    <div class="row vlarge">
-                        <div class="columns medium-3 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder image-holder">
-                                    <a href="#" data-rel="lightcase:videoCollection"><img src="img/img-blog-posts2.jpg" alt=""></a>
-                                </div>
-                            </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="2">
+                    <div class="search-posts posts-holder ajaxVideo new">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts2.jpg" alt=""></a>
+                            <div class="caption">NEW</div>
                         </div>
-                        <div class="columns medium-9 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder content-holder">
-                                    <h3><a href="#">Etiam Mollis Curcus</a></h3>
-                                    <div class="posts-date">August 3rd, 2017</div>
-                                    <div class="posts-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis augue ut fermentum eleifend. Aenean eget maximus purus, quis interdum augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                                </div>
-                            </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Vulputate Purus Euismod</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
                         </div>
                     </div>
-                    <div class="row vlarge">
-                        <div class="columns medium-3 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder image-holder">
-                                    <a href="#" data-rel="lightcase:videoCollection"><img src="img/img-blog-posts3.jpg" alt=""></a>
-                                </div>
-                            </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="3">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts3.jpg" alt=""></a>
                         </div>
-                        <div class="columns medium-9 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder content-holder">
-                                    <h3><a href="#">Etiam Mollis Curcus</a></h3>
-                                    <div class="posts-date">August 3rd, 2017</div>
-                                    <div class="posts-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis augue ut fermentum eleifend. Aenean eget maximus purus, quis interdum augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                                </div>
-                            </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Commodo Vehicula</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
                         </div>
                     </div>
-                    <div class="row vlarge">
-                        <div class="columns medium-3 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder image-holder">
-                                    <a href="#" data-rel="lightcase:videoCollection"><img src="img/img-blog-posts4.jpg" alt=""></a>
-                                </div>
-                            </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="4">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts4.jpg" alt=""></a>
                         </div>
-                        <div class="columns medium-9 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder content-holder">
-                                    <h3><a href="#">Etiam Mollis Curcus</a></h3>
-                                    <div class="posts-date">August 3rd, 2017</div>
-                                    <div class="posts-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis augue ut fermentum eleifend. Aenean eget maximus purus, quis interdum augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                                </div>
-                            </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
                         </div>
                     </div>
-                    <div class="row vlarge">
-                        <div class="columns medium-3 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder image-holder">
-                                    <a href="#" data-rel="lightcase:videoCollection"><img src="img/img-blog-posts1.jpg" alt=""></a>
-                                </div>
-                            </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="5">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts5.jpg" alt=""></a>
                         </div>
-                        <div class="columns medium-9 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder content-holder">
-                                    <h3><a href="#">Etiam Mollis Curcus</a></h3>
-                                    <div class="posts-date">August 3rd, 2017</div>
-                                    <div class="posts-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis augue ut fermentum eleifend. Aenean eget maximus purus, quis interdum augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                                </div>
-                            </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="6">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts6.jpg" alt=""></a>
+                        </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="7">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts7.jpg" alt=""></a>
+                        </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="8">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts8.jpg" alt=""></a>
+                        </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="9">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts9.jpg" alt=""></a>
+                        </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="tabs-panel" id="panel3">
-                <div class="flex-box">
-                    <div class="row vlarge">
-                        <div class="columns medium-3 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder image-holder">
-                                    <a href="#" data-rel="lightcase:videoCollection"><img src="img/img-blog-posts1.jpg" alt=""></a>
-                                </div>
-                            </div>
+            <div class="tab-contents" id="panel3">
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="1">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts1.jpg" alt=""></a>
                         </div>
-                        <div class="columns medium-9 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder content-holder">
-                                    <h3><a href="#">3. Donec ullam corper nulla non metus auctor fringilla.</a></h3>
-                                    <div class="posts-date">August 3rd, 2017</div>
-                                    <div class="posts-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis augue ut fermentum eleifend. Aenean eget maximus purus, quis interdum augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                                </div>
-                            </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
                         </div>
                     </div>
-                    <div class="row vlarge">
-                        <div class="columns medium-3 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder image-holder">
-                                    <a href="#" data-rel="lightcase:videoCollection"><img src="img/img-blog-posts2.jpg" alt=""></a>
-                                </div>
-                            </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="2">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts2.jpg" alt=""></a>
                         </div>
-                        <div class="columns medium-9 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder content-holder">
-                                    <h3><a href="#">Etiam Mollis Curcus</a></h3>
-                                    <div class="posts-date">August 3rd, 2017</div>
-                                    <div class="posts-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis augue ut fermentum eleifend. Aenean eget maximus purus, quis interdum augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                                </div>
-                            </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Vulputate Purus Euismod</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
                         </div>
                     </div>
-                    <div class="row vlarge">
-                        <div class="columns medium-3 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder image-holder">
-                                    <a href="#" data-rel="lightcase:videoCollection"><img src="img/img-blog-posts3.jpg" alt=""></a>
-                                </div>
-                            </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="3">
+                    <div class="search-posts posts-holder ajaxVideo new">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts3.jpg" alt=""></a>
+                            <div class="caption">NEW</div>
                         </div>
-                        <div class="columns medium-9 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder content-holder">
-                                    <h3><a href="#">Etiam Mollis Curcus</a></h3>
-                                    <div class="posts-date">August 3rd, 2017</div>
-                                    <div class="posts-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis augue ut fermentum eleifend. Aenean eget maximus purus, quis interdum augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                                </div>
-                            </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Commodo Vehicula</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
                         </div>
                     </div>
-                    <div class="row vlarge">
-                        <div class="columns medium-3 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder image-holder">
-                                    <a href="#" data-rel="lightcase:videoCollection"><img src="img/img-blog-posts4.jpg" alt=""></a>
-                                </div>
-                            </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="4">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts4.jpg" alt=""></a>
                         </div>
-                        <div class="columns medium-9 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder content-holder">
-                                    <h3><a href="#">Etiam Mollis Curcus</a></h3>
-                                    <div class="posts-date">August 3rd, 2017</div>
-                                    <div class="posts-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis augue ut fermentum eleifend. Aenean eget maximus purus, quis interdum augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                                </div>
-                            </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
                         </div>
                     </div>
-                    <div class="row vlarge">
-                        <div class="columns medium-3 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder image-holder">
-                                    <a href="#" data-rel="lightcase:videoCollection"><img src="img/img-blog-posts1.jpg" alt=""></a>
-                                </div>
-                            </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="5">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts5.jpg" alt=""></a>
                         </div>
-                        <div class="columns medium-9 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder content-holder">
-                                    <h3><a href="#">Etiam Mollis Curcus</a></h3>
-                                    <div class="posts-date">August 3rd, 2017</div>
-                                    <div class="posts-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis augue ut fermentum eleifend. Aenean eget maximus purus, quis interdum augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                                </div>
-                            </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="6">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts6.jpg" alt=""></a>
+                        </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="7">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts7.jpg" alt=""></a>
+                        </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="8">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts8.jpg" alt=""></a>
+                        </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="9">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts9.jpg" alt=""></a>
+                        </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="tabs-panel" id="panel4">
-                <div class="flex-box">
-                    <div class="row vlarge">
-                        <div class="columns medium-3 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder image-holder">
-                                    <a href="#" data-rel="lightcase:videoCollection"><img src="img/img-blog-posts1.jpg" alt=""></a>
-                                </div>
-                            </div>
+            <div class="tab-contents" id="panel4">
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="1">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts1.jpg" alt=""></a>
                         </div>
-                        <div class="columns medium-9 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder content-holder">
-                                    <h3><a href="#">4. Donec ullam corper nulla non metus auctor fringilla.</a></h3>
-                                    <div class="posts-date">August 3rd, 2017</div>
-                                    <div class="posts-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis augue ut fermentum eleifend. Aenean eget maximus purus, quis interdum augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                                </div>
-                            </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
                         </div>
                     </div>
-                    <div class="row vlarge">
-                        <div class="columns medium-3 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder image-holder">
-                                    <a href="#" data-rel="lightcase:videoCollection"><img src="img/img-blog-posts2.jpg" alt=""></a>
-                                </div>
-                            </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="2">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts2.jpg" alt=""></a>
                         </div>
-                        <div class="columns medium-9 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder content-holder">
-                                    <h3><a href="#">Etiam Mollis Curcus</a></h3>
-                                    <div class="posts-date">August 3rd, 2017</div>
-                                    <div class="posts-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis augue ut fermentum eleifend. Aenean eget maximus purus, quis interdum augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                                </div>
-                            </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Vulputate Purus Euismod</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
                         </div>
                     </div>
-                    <div class="row vlarge">
-                        <div class="columns medium-3 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder image-holder">
-                                    <a href="#" data-rel="lightcase:videoCollection"><img src="img/img-blog-posts3.jpg" alt=""></a>
-                                </div>
-                            </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="3">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts3.jpg" alt=""></a>
                         </div>
-                        <div class="columns medium-9 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder content-holder">
-                                    <h3><a href="#">Etiam Mollis Curcus</a></h3>
-                                    <div class="posts-date">August 3rd, 2017</div>
-                                    <div class="posts-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis augue ut fermentum eleifend. Aenean eget maximus purus, quis interdum augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                                </div>
-                            </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Commodo Vehicula</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
                         </div>
                     </div>
-                    <div class="row vlarge">
-                        <div class="columns medium-3 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder image-holder">
-                                    <a href="#" data-rel="lightcase:videoCollection"><img src="img/img-blog-posts4.jpg" alt=""></a>
-                                </div>
-                            </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="4">
+                    <div class="search-posts posts-holder ajaxVideo new">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts4.jpg" alt=""></a>
+                            <div class="caption">NEW</div>
                         </div>
-                        <div class="columns medium-9 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder content-holder">
-                                    <h3><a href="#">Etiam Mollis Curcus</a></h3>
-                                    <div class="posts-date">August 3rd, 2017</div>
-                                    <div class="posts-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis augue ut fermentum eleifend. Aenean eget maximus purus, quis interdum augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                                </div>
-                            </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
                         </div>
                     </div>
-                    <div class="row vlarge">
-                        <div class="columns medium-3 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder image-holder">
-                                    <a href="#" data-rel="lightcase:videoCollection"><img src="img/img-blog-posts1.jpg" alt=""></a>
-                                </div>
-                            </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="5">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts5.jpg" alt=""></a>
                         </div>
-                        <div class="columns medium-9 small-12 animated fadeIn">
-                            <div class="blog-posts posts-holder">
-                                <div class="blog-posts posts-holder content-holder">
-                                    <h3><a href="#">Etiam Mollis Curcus</a></h3>
-                                    <div class="posts-date">August 3rd, 2017</div>
-                                    <div class="posts-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis augue ut fermentum eleifend. Aenean eget maximus purus, quis interdum augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                                </div>
-                            </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="6">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts6.jpg" alt=""></a>
+                        </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="7">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts7.jpg" alt=""></a>
+                        </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="8">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts8.jpg" alt=""></a>
+                        </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns large-4 medium-6 small-12 animated fadeIn" data-id="9">
+                    <div class="search-posts posts-holder">
+                        <div class="search-posts posts-holder image-holder">
+                            <a href="iframe/video.php" data-rel="lightcase:videoCollection"><img src="img/img-posts9.jpg" alt=""></a>
+                        </div>
+                        <div class="search-posts posts-holder content-holder">
+                            <h3><a href="#">Etiam Mollis Curcus</a></h3>
+                            <div class="search-date">August 3rd, 2017</div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
             <div class="columns small-12">
                 <div class="search-lists readmore">
                     <a href="#">LOAD MORE</a>

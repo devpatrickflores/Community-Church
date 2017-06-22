@@ -149,7 +149,7 @@ $(document).foundation();
         });
     }
     $('.search-posts.lists.menu-holder ul li a').on('click', function(e) {
-        if (window_width < 768) {
+        if (window_width > 768) {
             e.preventDefault();
         }
         $('.search-posts.lists.menu-holder ul li a').removeClass('is-active');
