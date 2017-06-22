@@ -130,7 +130,7 @@
                             display: inline-block;
                             text-align: center;
                             border-bottom: 0;
-                            transition:none;
+                            transition: none;
                         }
                         &:hover {
                             border-bottom: 4px solid $orange;
@@ -213,7 +213,10 @@
         .tab-contents {
             display: none;
             &.is-active {
-                display: block;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
             }
         }
         .search-lists {
@@ -269,18 +272,8 @@
             }
             img {
                 margin: auto;
-                height: 215px;
                 display: table;
                 width: 100%;
-                @include breakpoint(xlarge only) {
-                    height: 183px;
-                }
-                @include breakpoint(large only) {
-                    height: 161px;
-                }
-                @include breakpoint(medium down) {
-                    height: 100%;
-                }
             }
         }
         &.content-holder {
